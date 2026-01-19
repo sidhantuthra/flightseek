@@ -1,65 +1,119 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+import { Airport, Airline, Route, RoutesByAirport, Filters } from "@/types";
+import Sidebar from "@/components/Sidebar";
+
+// Dynamic import for Leaflet (no SSR)
+const FlightMap = dynamic(() => import("@/components/FlightMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-zinc-900">
+      <div className="text-zinc-400">Loading map...</div>
+    </div>
+  ),
+});
 
 export default function Home() {
+  const [airports, setAirports] = useState<Airport[]>([]);
+  const [airlines, setAirlines] = useState<Airline[]>([]);
+  const [routes, setRoutes] = useState<Route[]>([]);
+  const [routesByAirport, setRoutesByAirport] = useState<RoutesByAirport>({});
+  const [aircraftTypes, setAircraftTypes] = useState<string[]>([]);
+  const [selectedAirport, setSelectedAirport] = useState<Airport | null>(null);
+  const [filters, setFilters] = useState<Filters>({ airlines: [], aircraft: [], includeCodeshares: false });
+  const [loading, setLoading] = useState(true);
+
+  const handleReset = () => {
+    setSelectedAirport(null);
+    setFilters({ airlines: [], aircraft: [], includeCodeshares: false });
+  };
+
+  // Load data on mount
+  useEffect(() => {
+    async function loadData() {
+      try {
+        const [airportsRes, airlinesRes, routesRes, routesByAirportRes, aircraftRes] =
+          await Promise.all([
+            fetch("/data/airports.json"),
+            fetch("/data/airlines.json"),
+            fetch("/data/routes.json"),
+            fetch("/data/routes-by-airport.json"),
+            fetch("/data/aircraft-types.json"),
+          ]);
+
+        const [airportsData, airlinesData, routesData, routesByAirportData, aircraftData] =
+          await Promise.all([
+            airportsRes.json(),
+            airlinesRes.json(),
+            routesRes.json(),
+            routesByAirportRes.json(),
+            aircraftRes.json(),
+          ]);
+
+        setAirports(airportsData);
+        setAirlines(airlinesData);
+        setRoutes(routesData);
+        setRoutesByAirport(routesByAirportData);
+        setAircraftTypes(aircraftData);
+        setLoading(false);
+      } catch (error) {
+        console.error("Failed to load data:", error);
+        setLoading(false);
+      }
+    }
+
+    loadData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="h-screen w-screen flex items-center justify-center bg-zinc-900">
+        <div className="text-center">
+          <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="text-zinc-400">Loading flight data...</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="h-screen w-screen flex overflow-hidden">
+      <Sidebar
+        airports={airports}
+        airlines={airlines}
+        aircraftTypes={aircraftTypes}
+        selectedAirport={selectedAirport}
+        onAirportSelect={setSelectedAirport}
+        routes={routes}
+        filters={filters}
+        onFiltersChange={setFilters}
+        routesByAirport={routesByAirport}
+        onReset={handleReset}
+      />
+      <div className="flex-1 relative">
+        <FlightMap
+          airports={airports}
+          allRoutes={routes}
+          routesByAirport={routesByAirport}
+          airlines={airlines}
+          selectedAirport={selectedAirport}
+          onAirportSelect={setSelectedAirport}
+          filters={filters}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        
+        {/* Stats overlay */}
+        <div className="absolute bottom-4 right-4 bg-zinc-900/90 backdrop-blur-sm px-3 py-2 rounded-lg text-xs text-zinc-400">
+          {selectedAirport ? (
+            <>
+              Showing routes from <span className="text-amber-400 font-medium">{selectedAirport.iata}</span>
+            </>
+          ) : (
+            <>Click an airport to explore routes</>
+          )}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
     </div>
   );
 }
