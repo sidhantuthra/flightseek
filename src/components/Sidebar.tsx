@@ -126,8 +126,8 @@ export default function Sidebar({
       );
     }
     
-    // Sort alphabetically by name
-    return result.sort((a, b) => a.name.localeCompare(b.name));
+    // Sort alphabetically by name without mutating source array
+    return [...result].sort((a, b) => a.name.localeCompare(b.name));
   }, [availableAirlines, airlineSearch]);
 
   const filteredAircraftTypes = useMemo(() => {
