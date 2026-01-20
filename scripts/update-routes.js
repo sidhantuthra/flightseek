@@ -149,7 +149,6 @@ Only include the IATA codes in your response.`
         }
       ],
       response_format: { type: 'json_object' },
-      temperature: 0.1,
     });
     
     try {
