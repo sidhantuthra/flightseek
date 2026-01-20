@@ -223,7 +223,6 @@ Only include valid 3-letter IATA airport codes.`
       }
     ],
     response_format: { type: 'json_object' },
-    temperature: 0.1,
   });
   
   try {
