@@ -1,11 +1,11 @@
 /**
- * Route Update Script
+ * Route Update Script - Airport-Based Approach
  * 
  * This script:
- * 1. Uses GPT to validate which airlines are currently active
- * 2. Scrapes Wikipedia for route data from major airlines
- * 3. Uses GPT as fallback for airlines without Wikipedia pages
- * 4. Updates routes.json with fresh data
+ * 1. Scrapes Wikipedia airport pages for "Airlines and destinations" tables
+ * 2. Extracts airline and destination data from each airport
+ * 3. Builds a complete route network from this data
+ * 4. Uses GPT to validate/match airline names to IATA codes
  */
 
 import OpenAI from 'openai';
@@ -27,199 +27,259 @@ const AIRLINES_PATH = path.join(DATA_DIR, 'airlines.json');
 const AIRPORTS_PATH = path.join(DATA_DIR, 'airports.json');
 const ROUTES_PATH = path.join(DATA_DIR, 'routes.json');
 
-// Top airlines with reliable Wikipedia pages
-const TIER_1_AIRLINES = [
-  // US Major
-  { iata: 'AA', name: 'American Airlines', wiki: 'American_Airlines_destinations' },
-  { iata: 'DL', name: 'Delta Air Lines', wiki: 'Delta_Air_Lines_destinations' },
-  { iata: 'UA', name: 'United Airlines', wiki: 'United_Airlines_destinations' },
-  { iata: 'WN', name: 'Southwest Airlines', wiki: 'Southwest_Airlines_destinations' },
-  { iata: 'B6', name: 'JetBlue', wiki: 'JetBlue_destinations' },
-  { iata: 'AS', name: 'Alaska Airlines', wiki: 'Alaska_Airlines_destinations' },
-  { iata: 'NK', name: 'Spirit Airlines', wiki: 'Spirit_Airlines_destinations' },
-  { iata: 'F9', name: 'Frontier Airlines', wiki: 'Frontier_Airlines_destinations' },
+// Major airports to scrape (by traffic/importance)
+// These have well-maintained Wikipedia pages
+const MAJOR_AIRPORTS = [
+  // North America - Major Hubs
+  { iata: 'ATL', wiki: 'Hartsfield–Jackson_Atlanta_International_Airport' },
+  { iata: 'LAX', wiki: 'Los_Angeles_International_Airport' },
+  { iata: 'ORD', wiki: "O'Hare_International_Airport" },
+  { iata: 'DFW', wiki: 'Dallas/Fort_Worth_International_Airport' },
+  { iata: 'DEN', wiki: 'Denver_International_Airport' },
+  { iata: 'JFK', wiki: 'John_F._Kennedy_International_Airport' },
+  { iata: 'SFO', wiki: 'San_Francisco_International_Airport' },
+  { iata: 'SEA', wiki: 'Seattle–Tacoma_International_Airport' },
+  { iata: 'LAS', wiki: 'Harry_Reid_International_Airport' },
+  { iata: 'MCO', wiki: 'Orlando_International_Airport' },
+  { iata: 'EWR', wiki: 'Newark_Liberty_International_Airport' },
+  { iata: 'MIA', wiki: 'Miami_International_Airport' },
+  { iata: 'PHX', wiki: 'Phoenix_Sky_Harbor_International_Airport' },
+  { iata: 'IAH', wiki: 'George_Bush_Intercontinental_Airport' },
+  { iata: 'BOS', wiki: 'Logan_International_Airport' },
+  { iata: 'MSP', wiki: 'Minneapolis–Saint_Paul_International_Airport' },
+  { iata: 'DTW', wiki: 'Detroit_Metropolitan_Airport' },
+  { iata: 'PHL', wiki: 'Philadelphia_International_Airport' },
+  { iata: 'LGA', wiki: 'LaGuardia_Airport' },
+  { iata: 'BWI', wiki: 'Baltimore/Washington_International_Airport' },
+  { iata: 'SLC', wiki: 'Salt_Lake_City_International_Airport' },
+  { iata: 'DCA', wiki: 'Ronald_Reagan_Washington_National_Airport' },
+  { iata: 'IAD', wiki: 'Washington_Dulles_International_Airport' },
+  { iata: 'SAN', wiki: 'San_Diego_International_Airport' },
+  { iata: 'TPA', wiki: 'Tampa_International_Airport' },
+  { iata: 'YYZ', wiki: 'Toronto_Pearson_International_Airport' },
+  { iata: 'YVR', wiki: 'Vancouver_International_Airport' },
+  { iata: 'YUL', wiki: 'Montréal–Trudeau_International_Airport' },
+  { iata: 'MEX', wiki: 'Mexico_City_International_Airport' },
+  { iata: 'CUN', wiki: 'Cancún_International_Airport' },
   
-  // Europe Major
-  { iata: 'LH', name: 'Lufthansa', wiki: 'Lufthansa_destination' },
-  { iata: 'BA', name: 'British Airways', wiki: 'British_Airways_destinations' },
-  { iata: 'AF', name: 'Air France', wiki: 'Air_France_destinations' },
-  { iata: 'KL', name: 'KLM', wiki: 'KLM_destinations' },
-  { iata: 'FR', name: 'Ryanair', wiki: 'Ryanair_destinations' },
-  { iata: 'U2', name: 'easyJet', wiki: 'EasyJet_destinations' },
-  { iata: 'IB', name: 'Iberia', wiki: 'Iberia_(airline)_destinations' },
-  { iata: 'TK', name: 'Turkish Airlines', wiki: 'Turkish_Airlines_destinations' },
-  { iata: 'SK', name: 'SAS', wiki: 'SAS_destinations' },
-  { iata: 'AY', name: 'Finnair', wiki: 'Finnair_destinations' },
-  { iata: 'LX', name: 'Swiss International Air Lines', wiki: 'Swiss_International_Air_Lines_destinations' },
-  { iata: 'OS', name: 'Austrian Airlines', wiki: 'Austrian_Airlines_destinations' },
+  // Europe - Major Hubs
+  { iata: 'LHR', wiki: 'Heathrow_Airport' },
+  { iata: 'CDG', wiki: 'Charles_de_Gaulle_Airport' },
+  { iata: 'AMS', wiki: 'Amsterdam_Airport_Schiphol' },
+  { iata: 'FRA', wiki: 'Frankfurt_Airport' },
+  { iata: 'IST', wiki: 'Istanbul_Airport' },
+  { iata: 'MAD', wiki: 'Adolfo_Suárez_Madrid–Barajas_Airport' },
+  { iata: 'BCN', wiki: 'Barcelona–El_Prat_Airport' },
+  { iata: 'LGW', wiki: 'Gatwick_Airport' },
+  { iata: 'MUC', wiki: 'Munich_Airport' },
+  { iata: 'FCO', wiki: 'Leonardo_da_Vinci–Fiumicino_Airport' },
+  { iata: 'DUB', wiki: 'Dublin_Airport' },
+  { iata: 'ZRH', wiki: 'Zurich_Airport' },
+  { iata: 'CPH', wiki: 'Copenhagen_Airport' },
+  { iata: 'VIE', wiki: 'Vienna_International_Airport' },
+  { iata: 'OSL', wiki: 'Oslo_Airport,_Gardermoen' },
+  { iata: 'ARN', wiki: 'Stockholm_Arlanda_Airport' },
+  { iata: 'HEL', wiki: 'Helsinki_Airport' },
+  { iata: 'LIS', wiki: 'Lisbon_Airport' },
+  { iata: 'BRU', wiki: 'Brussels_Airport' },
+  { iata: 'MAN', wiki: 'Manchester_Airport' },
+  { iata: 'STN', wiki: 'London_Stansted_Airport' },
   
-  // Middle East
-  { iata: 'EK', name: 'Emirates', wiki: 'Emirates_(airline)_destinations' },
-  { iata: 'QR', name: 'Qatar Airways', wiki: 'Qatar_Airways_destinations' },
-  { iata: 'EY', name: 'Etihad Airways', wiki: 'Etihad_Airways_destinations' },
-  { iata: 'SV', name: 'Saudia', wiki: 'Saudia_destinations' },
-  
-  // Asia Pacific
-  { iata: 'SQ', name: 'Singapore Airlines', wiki: 'Singapore_Airlines_destinations' },
-  { iata: 'CX', name: 'Cathay Pacific', wiki: 'Cathay_Pacific_destinations' },
-  { iata: 'NH', name: 'ANA', wiki: 'All_Nippon_Airways_destinations' },
-  { iata: 'JL', name: 'Japan Airlines', wiki: 'Japan_Airlines_destinations' },
-  { iata: 'KE', name: 'Korean Air', wiki: 'Korean_Air_destinations' },
-  { iata: 'OZ', name: 'Asiana Airlines', wiki: 'Asiana_Airlines_destinations' },
-  { iata: 'CA', name: 'Air China', wiki: 'Air_China_destinations' },
-  { iata: 'MU', name: 'China Eastern', wiki: 'China_Eastern_Airlines_destinations' },
-  { iata: 'CZ', name: 'China Southern', wiki: 'China_Southern_Airlines_destinations' },
-  { iata: 'TG', name: 'Thai Airways', wiki: 'Thai_Airways_destinations' },
-  { iata: 'MH', name: 'Malaysia Airlines', wiki: 'Malaysia_Airlines_destinations' },
-  { iata: 'GA', name: 'Garuda Indonesia', wiki: 'Garuda_Indonesia_destinations' },
-  { iata: 'VN', name: 'Vietnam Airlines', wiki: 'Vietnam_Airlines_destinations' },
-  { iata: 'AI', name: 'Air India', wiki: 'Air_India_destinations' },
-  
-  // Americas (non-US)
-  { iata: 'AC', name: 'Air Canada', wiki: 'Air_Canada_destinations' },
-  { iata: 'WS', name: 'WestJet', wiki: 'WestJet_destinations' },
-  { iata: 'AM', name: 'Aeromexico', wiki: 'Aerom%C3%A9xico_destinations' },
-  { iata: 'LA', name: 'LATAM Airlines', wiki: 'LATAM_Chile_destinations' },
-  { iata: 'AV', name: 'Avianca', wiki: 'Avianca_destinations' },
-  { iata: 'CM', name: 'Copa Airlines', wiki: 'Copa_Airlines_destinations' },
+  // Asia - Major Hubs  
+  { iata: 'DXB', wiki: 'Dubai_International_Airport' },
+  { iata: 'HND', wiki: 'Haneda_Airport' },
+  { iata: 'NRT', wiki: 'Narita_International_Airport' },
+  { iata: 'SIN', wiki: 'Singapore_Changi_Airport' },
+  { iata: 'HKG', wiki: 'Hong_Kong_International_Airport' },
+  { iata: 'ICN', wiki: 'Incheon_International_Airport' },
+  { iata: 'PVG', wiki: 'Shanghai_Pudong_International_Airport' },
+  { iata: 'PEK', wiki: 'Beijing_Capital_International_Airport' },
+  { iata: 'BKK', wiki: 'Suvarnabhumi_Airport' },
+  { iata: 'KUL', wiki: 'Kuala_Lumpur_International_Airport' },
+  { iata: 'DEL', wiki: 'Indira_Gandhi_International_Airport' },
+  { iata: 'BOM', wiki: 'Chhatrapati_Shivaji_Maharaj_International_Airport' },
+  { iata: 'DOH', wiki: 'Hamad_International_Airport' },
+  { iata: 'AUH', wiki: 'Abu_Dhabi_International_Airport' },
+  { iata: 'TPE', wiki: 'Taiwan_Taoyuan_International_Airport' },
+  { iata: 'MNL', wiki: 'Ninoy_Aquino_International_Airport' },
+  { iata: 'CGK', wiki: 'Soekarno–Hatta_International_Airport' },
+  { iata: 'BLR', wiki: 'Kempegowda_International_Airport' },
+  { iata: 'HYD', wiki: 'Rajiv_Gandhi_International_Airport' },
+  { iata: 'MAA', wiki: 'Chennai_International_Airport' },
   
   // Oceania
-  { iata: 'QF', name: 'Qantas', wiki: 'Qantas_destinations' },
-  { iata: 'NZ', name: 'Air New Zealand', wiki: 'Air_New_Zealand_destinations' },
-  { iata: 'VA', name: 'Virgin Australia', wiki: 'Virgin_Australia_destinations' },
+  { iata: 'SYD', wiki: 'Sydney_Airport' },
+  { iata: 'MEL', wiki: 'Melbourne_Airport' },
+  { iata: 'BNE', wiki: 'Brisbane_Airport' },
+  { iata: 'AKL', wiki: 'Auckland_Airport' },
+  { iata: 'PER', wiki: 'Perth_Airport' },
   
-  // Africa
-  { iata: 'ET', name: 'Ethiopian Airlines', wiki: 'Ethiopian_Airlines_destinations' },
-  { iata: 'SA', name: 'South African Airways', wiki: 'South_African_Airways_destinations' },
-  { iata: 'MS', name: 'EgyptAir', wiki: 'EgyptAir_destinations' },
+  // South America
+  { iata: 'GRU', wiki: 'São_Paulo–Guarulhos_International_Airport' },
+  { iata: 'EZE', wiki: 'Ministro_Pistarini_International_Airport' },
+  { iata: 'BOG', wiki: 'El_Dorado_International_Airport' },
+  { iata: 'SCL', wiki: 'Santiago_International_Airport' },
+  { iata: 'LIM', wiki: 'Jorge_Chávez_International_Airport' },
+  { iata: 'GIG', wiki: 'Rio_de_Janeiro–Galeão_International_Airport' },
+  
+  // Africa & Middle East
+  { iata: 'JNB', wiki: 'O._R._Tambo_International_Airport' },
+  { iata: 'CAI', wiki: 'Cairo_International_Airport' },
+  { iata: 'ADD', wiki: 'Addis_Ababa_Bole_International_Airport' },
+  { iata: 'CMN', wiki: 'Mohammed_V_International_Airport' },
+  { iata: 'NBO', wiki: 'Jomo_Kenyatta_International_Airport' },
+  { iata: 'CPT', wiki: 'Cape_Town_International_Airport' },
+  { iata: 'LOS', wiki: 'Murtala_Muhammed_International_Airport' },
+  { iata: 'TLV', wiki: 'Ben_Gurion_Airport' },
+  { iata: 'AMM', wiki: 'Queen_Alia_International_Airport' },
+  { iata: 'RUH', wiki: 'King_Khalid_International_Airport' },
+  { iata: 'JED', wiki: 'King_Abdulaziz_International_Airport' },
 ];
 
-// Helper: Sleep for rate limiting
+// Helper functions
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// Helper: Load JSON file
 async function loadJSON(filePath) {
   const data = await fs.readFile(filePath, 'utf-8');
   return JSON.parse(data);
 }
 
-// Helper: Save JSON file
 async function saveJSON(filePath, data) {
   await fs.writeFile(filePath, JSON.stringify(data, null, 2));
 }
 
 /**
- * Step 1: Use GPT to validate which airlines are currently active
+ * Scrape Wikipedia airport page for airlines and destinations
  */
-async function validateAirlines(airlines) {
-  console.log('Step 1: Validating airlines with GPT...');
-  
-  const activeAirlines = [];
-  const defunctAirlines = [];
-  
-  // Process in batches of 50 to avoid token limits
-  const batchSize = 50;
-  
-  for (let i = 0; i < airlines.length; i += batchSize) {
-    const batch = airlines.slice(i, i + batchSize);
-    const airlineList = batch.map(a => `${a.iata}: ${a.name} (${a.country})`).join('\n');
-    
-    console.log(`  Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(airlines.length / batchSize)}...`);
-    
-    const response = await openai.chat.completions.create({
-      model: 'gpt-5-nano',
-      messages: [
-        {
-          role: 'system',
-          content: `You are an aviation expert. Given a list of airlines, identify which ones are currently operating (active) and which are defunct, merged, or no longer operating passenger services.
-
-Respond in JSON format:
-{
-  "active": ["IATA1", "IATA2", ...],
-  "defunct": ["IATA3", "IATA4", ...]
-}
-
-Only include the IATA codes in your response.`
-        },
-        {
-          role: 'user',
-          content: `Classify these airlines as active or defunct:\n\n${airlineList}`
-        }
-      ],
-      response_format: { type: 'json_object' },
-    });
-    
-    try {
-      const result = JSON.parse(response.choices[0].message.content);
-      activeAirlines.push(...(result.active || []));
-      defunctAirlines.push(...(result.defunct || []));
-    } catch (e) {
-      console.error('  Failed to parse GPT response, keeping all airlines as active');
-      activeAirlines.push(...batch.map(a => a.iata));
-    }
-    
-    // Rate limiting
-    await sleep(500);
-  }
-  
-  console.log(`  Found ${activeAirlines.length} active airlines, ${defunctAirlines.length} defunct`);
-  return { active: activeAirlines, defunct: defunctAirlines };
-}
-
-/**
- * Step 2: Scrape Wikipedia for route data
- */
-async function scrapeWikipediaRoutes(airline) {
-  const wikiUrl = `https://en.wikipedia.org/wiki/${airline.wiki}`;
+async function scrapeAirportWikipedia(airport) {
+  const url = `https://en.wikipedia.org/wiki/${airport.wiki}`;
   
   try {
-    const response = await fetch(wikiUrl);
+    const response = await fetch(url);
     if (!response.ok) {
+      console.log(`    Failed to fetch ${airport.iata}: HTTP ${response.status}`);
       return null;
     }
     
     const html = await response.text();
     
-    // Extract IATA codes from the page using regex
-    // Wikipedia destination pages typically have airport codes in various formats
-    const iataPattern = /\b([A-Z]{3})\b/g;
-    const matches = html.match(iataPattern) || [];
+    // Find the Airlines and destinations section
+    // Look for tables after the "Airlines and destinations" heading
+    const airlinesSection = html.match(/id="Airlines_and_destinations"[\s\S]*?(<table[\s\S]*?<\/table>)/i);
     
-    // Filter to only valid airport codes (we'll validate against our airports list)
-    const uniqueCodes = [...new Set(matches)];
+    if (!airlinesSection) {
+      // Try alternate section names
+      const altSection = html.match(/id="Passenger"[\s\S]*?(<table[\s\S]*?<\/table>)/i) ||
+                        html.match(/id="Airlines"[\s\S]*?(<table[\s\S]*?<\/table>)/i);
+      if (!altSection) {
+        console.log(`    No airlines table found for ${airport.iata}`);
+        return null;
+      }
+    }
     
-    return uniqueCodes;
-  } catch (e) {
-    console.error(`  Failed to fetch Wikipedia for ${airline.name}: ${e.message}`);
+    // Extract all tables from the page
+    const tables = html.match(/<table[^>]*class="[^"]*wikitable[^"]*"[^>]*>[\s\S]*?<\/table>/gi) || [];
+    
+    const routes = [];
+    
+    for (const table of tables) {
+      // Check if this looks like an airlines/destinations table
+      if (!table.includes('Destinations') && !table.includes('destinations')) continue;
+      
+      // Parse table rows
+      const rows = table.match(/<tr[\s\S]*?<\/tr>/gi) || [];
+      
+      for (const row of rows) {
+        // Extract cells
+        const cells = row.match(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi) || [];
+        
+        if (cells.length >= 2) {
+          // First cell usually contains airline info
+          const airlineCell = cells[0];
+          // Second or last cell usually contains destinations
+          const destCell = cells[cells.length - 1];
+          
+          // Extract airline IATA codes or names from links
+          const airlineMatches = airlineCell.match(/title="([^"]+)"/g) || [];
+          const airlineNames = airlineMatches.map(m => m.replace(/title="|"/g, ''));
+          
+          // Extract destination airport codes
+          // Look for 3-letter codes in parentheses or links
+          const destCodes = destCell.match(/\b([A-Z]{3})\b/g) || [];
+          
+          // Also try to extract from links like [[Airport Name|CODE]]
+          const destLinks = destCell.match(/title="[^"]*Airport[^"]*"/gi) || [];
+          
+          if (destCodes.length > 0 && airlineNames.length > 0) {
+            routes.push({
+              airlines: airlineNames,
+              destinations: [...new Set(destCodes)]
+            });
+          }
+        }
+      }
+    }
+    
+    return routes;
+  } catch (error) {
+    console.log(`    Error scraping ${airport.iata}: ${error.message}`);
     return null;
   }
 }
 
 /**
- * Step 3: Use GPT to get routes for airlines without Wikipedia data
+ * Use GPT to match airline names to IATA codes
  */
-async function getRoutesFromGPT(airline, airports) {
-  console.log(`  Querying GPT for ${airline.name} routes...`);
+async function matchAirlineToIATA(airlineName, knownAirlines) {
+  // First try exact match
+  const exactMatch = knownAirlines.find(a => 
+    a.name.toLowerCase() === airlineName.toLowerCase() ||
+    a.iata === airlineName
+  );
+  if (exactMatch) return exactMatch.iata;
+  
+  // Try partial match
+  const partialMatch = knownAirlines.find(a => 
+    a.name.toLowerCase().includes(airlineName.toLowerCase()) ||
+    airlineName.toLowerCase().includes(a.name.toLowerCase())
+  );
+  if (partialMatch) return partialMatch.iata;
+  
+  return null;
+}
+
+/**
+ * Use GPT to batch match unknown airline names to IATA codes
+ */
+async function batchMatchAirlines(unknownNames, knownAirlines) {
+  if (unknownNames.length === 0) return {};
+  
+  const airlineList = knownAirlines.map(a => `${a.iata}: ${a.name}`).join('\n');
   
   const response = await openai.chat.completions.create({
     model: 'gpt-5-nano',
     messages: [
       {
         role: 'system',
-        content: `You are an aviation expert. Given an airline, list the IATA airport codes of destinations they currently serve. Only include airports where they have scheduled passenger service.
+        content: `You are an aviation expert. Given airline names, match them to their IATA codes from this list:
+
+${airlineList}
 
 Respond in JSON format:
 {
-  "destinations": ["JFK", "LAX", "LHR", ...]
+  "matches": {
+    "Airline Name": "XX",
+    ...
+  }
 }
 
-Only include valid 3-letter IATA airport codes.`
+If you can't find a match, use null. Only use codes from the provided list.`
       },
       {
         role: 'user',
-        content: `What destinations does ${airline.name} (${airline.iata}) currently serve?`
+        content: `Match these airline names to IATA codes:\n${unknownNames.join('\n')}`
       }
     ],
     response_format: { type: 'json_object' },
@@ -227,43 +287,18 @@ Only include valid 3-letter IATA airport codes.`
   
   try {
     const result = JSON.parse(response.choices[0].message.content);
-    return result.destinations || [];
+    return result.matches || {};
   } catch (e) {
-    console.error(`  Failed to parse GPT response for ${airline.name}`);
-    return [];
+    console.error('Failed to parse GPT response for airline matching');
+    return {};
   }
-}
-
-/**
- * Build routes from destination lists
- */
-function buildRoutes(airlineCode, destinations, validAirports) {
-  const routes = [];
-  const validCodes = new Set(validAirports.map(a => a.iata));
-  
-  // Filter to only valid airport codes
-  const validDestinations = destinations.filter(d => validCodes.has(d));
-  
-  // Create routes between all pairs (simplified - in reality would need hub info)
-  // For now, we'll create routes from major hubs to each destination
-  for (const dest of validDestinations) {
-    routes.push({
-      origin: dest,
-      destination: dest, // This will be updated when we merge
-      operators: [airlineCode],
-      codeshares: [],
-      aircraft: [],
-    });
-  }
-  
-  return validDestinations;
 }
 
 /**
  * Main execution
  */
 async function main() {
-  console.log('=== Route Update Script ===\n');
+  console.log('=== Route Update Script (Airport-Based) ===\n');
   
   // Load existing data
   console.log('Loading existing data...');
@@ -272,142 +307,176 @@ async function main() {
   const existingRoutes = await loadJSON(ROUTES_PATH);
   
   const validAirportCodes = new Set(airports.map(a => a.iata));
+  const airlineByName = new Map();
+  const airlineByIATA = new Map();
+  
+  for (const airline of airlines) {
+    airlineByName.set(airline.name.toLowerCase(), airline.iata);
+    airlineByIATA.set(airline.iata, airline);
+  }
   
   console.log(`  Loaded ${airlines.length} airlines`);
   console.log(`  Loaded ${airports.length} airports`);
   console.log(`  Loaded ${existingRoutes.length} existing routes\n`);
   
-  // Step 1: Validate airlines
-  const { active: activeIatas, defunct: defunctIatas } = await validateAirlines(airlines);
-  const activeSet = new Set(activeIatas);
-  const defunctSet = new Set(defunctIatas);
+  // Step 1: Scrape Wikipedia for each major airport
+  console.log('Step 1: Scraping Wikipedia airport pages...\n');
   
-  // Step 2: Collect routes from all sources
-  console.log('\nStep 2: Collecting route data...\n');
+  const allRoutes = new Map(); // "ORIGIN-DEST" -> { operators: Set, ... }
+  const unknownAirlines = new Set();
+  let successCount = 0;
+  let failCount = 0;
   
-  const airlineDestinations = new Map(); // iata -> Set of destination codes
-  
-  // 2a: Scrape Wikipedia for Tier 1 airlines
-  console.log('Scraping Wikipedia for major airlines...');
-  for (const airline of TIER_1_AIRLINES) {
-    if (!activeSet.has(airline.iata)) {
-      console.log(`  Skipping ${airline.name} (defunct)`);
-      continue;
-    }
+  for (const airport of MAJOR_AIRPORTS) {
+    console.log(`  Scraping ${airport.iata}...`);
     
-    console.log(`  Fetching ${airline.name}...`);
-    const destinations = await scrapeWikipediaRoutes(airline);
+    const data = await scrapeAirportWikipedia(airport);
     
-    if (destinations && destinations.length > 0) {
-      // Filter to valid airports
-      const validDests = destinations.filter(d => validAirportCodes.has(d));
-      airlineDestinations.set(airline.iata, new Set(validDests));
-      console.log(`    Found ${validDests.length} valid destinations`);
-    } else {
-      console.log(`    No Wikipedia data, will use GPT fallback`);
-    }
-    
-    await sleep(1000); // Be polite to Wikipedia
-  }
-  
-  // 2b: GPT fallback for Tier 1 without Wikipedia data
-  console.log('\nUsing GPT fallback for airlines without Wikipedia data...');
-  for (const airline of TIER_1_AIRLINES) {
-    if (!activeSet.has(airline.iata)) continue;
-    if (airlineDestinations.has(airline.iata)) continue;
-    
-    const destinations = await getRoutesFromGPT(airline, airports);
-    const validDests = destinations.filter(d => validAirportCodes.has(d));
-    airlineDestinations.set(airline.iata, new Set(validDests));
-    console.log(`    ${airline.name}: ${validDests.length} destinations`);
-    
-    await sleep(500);
-  }
-  
-  // 2c: For non-Tier-1 active airlines, use GPT
-  console.log('\nQuerying GPT for smaller active airlines...');
-  const tier1Iatas = new Set(TIER_1_AIRLINES.map(a => a.iata));
-  const otherActiveAirlines = airlines.filter(a => 
-    activeSet.has(a.iata) && !tier1Iatas.has(a.iata)
-  );
-  
-  // Process in batches to avoid rate limits
-  let processed = 0;
-  for (const airline of otherActiveAirlines) {
-    const destinations = await getRoutesFromGPT(airline, airports);
-    const validDests = destinations.filter(d => validAirportCodes.has(d));
-    
-    if (validDests.length > 0) {
-      airlineDestinations.set(airline.iata, new Set(validDests));
-    }
-    
-    processed++;
-    if (processed % 10 === 0) {
-      console.log(`  Processed ${processed}/${otherActiveAirlines.length} airlines...`);
-    }
-    
-    await sleep(300);
-  }
-  
-  // Step 3: Build new routes
-  console.log('\nStep 3: Building route network...');
-  
-  // Start with existing routes, filtered to active airlines
-  const newRoutes = [];
-  const routeSet = new Set(); // Track unique routes
-  
-  // Filter existing routes to only active airlines
-  for (const route of existingRoutes) {
-    const activeOperators = route.operators.filter(op => activeSet.has(op) || !defunctSet.has(op));
-    
-    if (activeOperators.length > 0) {
-      const routeKey = `${route.origin}-${route.destination}`;
-      if (!routeSet.has(routeKey)) {
-        routeSet.add(routeKey);
-        newRoutes.push({
-          ...route,
-          operators: activeOperators,
-        });
-      }
-    }
-  }
-  
-  // Add routes from our collected data
-  for (const [airlineIata, destinations] of airlineDestinations) {
-    const destArray = Array.from(destinations);
-    
-    // For each destination, check if we have a route
-    // We need origin info - for now, add to existing routes
-    for (const dest of destArray) {
-      // Find routes involving this destination and add the airline
-      for (const route of newRoutes) {
-        if (route.destination === dest || route.origin === dest) {
-          if (!route.operators.includes(airlineIata)) {
-            // Only add if this airline reasonably could fly this route
-            // (simplified logic - in production would need more verification)
+    if (data && data.length > 0) {
+      successCount++;
+      let routeCount = 0;
+      
+      for (const entry of data) {
+        for (const dest of entry.destinations) {
+          // Validate destination is a real airport
+          if (!validAirportCodes.has(dest)) continue;
+          if (dest === airport.iata) continue; // Skip self-routes
+          
+          const routeKey = `${airport.iata}-${dest}`;
+          const reverseKey = `${dest}-${airport.iata}`;
+          
+          // Initialize route if needed
+          if (!allRoutes.has(routeKey)) {
+            allRoutes.set(routeKey, {
+              origin: airport.iata,
+              destination: dest,
+              operators: new Set(),
+              codeshares: [],
+              aircraft: []
+            });
+          }
+          
+          // Try to match airlines
+          for (const airlineName of entry.airlines) {
+            const iata = await matchAirlineToIATA(airlineName, airlines);
+            if (iata) {
+              allRoutes.get(routeKey).operators.add(iata);
+              routeCount++;
+            } else if (airlineName.length > 2) {
+              unknownAirlines.add(airlineName);
+            }
           }
         }
       }
+      
+      console.log(`    Found ${routeCount} route-airline pairs`);
+    } else {
+      failCount++;
+    }
+    
+    // Rate limiting - be polite to Wikipedia
+    await sleep(1500);
+  }
+  
+  console.log(`\n  Scraped ${successCount}/${MAJOR_AIRPORTS.length} airports successfully`);
+  
+  // Step 2: Use GPT to match unknown airlines
+  if (unknownAirlines.size > 0) {
+    console.log(`\nStep 2: Matching ${unknownAirlines.size} unknown airline names with GPT...`);
+    
+    const unknownList = Array.from(unknownAirlines).slice(0, 100); // Limit to avoid huge API calls
+    const matches = await batchMatchAirlines(unknownList, airlines);
+    
+    let matchCount = 0;
+    for (const [name, iata] of Object.entries(matches)) {
+      if (iata) {
+        airlineByName.set(name.toLowerCase(), iata);
+        matchCount++;
+      }
+    }
+    console.log(`  Matched ${matchCount} additional airlines`);
+  }
+  
+  // Step 3: Merge with existing routes
+  console.log('\nStep 3: Merging with existing routes...');
+  
+  // Convert existing routes to map for easy lookup
+  const existingRouteMap = new Map();
+  for (const route of existingRoutes) {
+    const key = `${route.origin}-${route.destination}`;
+    existingRouteMap.set(key, route);
+  }
+  
+  // Merge: keep existing routes, add/update from scraped data
+  const finalRoutes = [];
+  const processedKeys = new Set();
+  
+  // First, add all scraped routes
+  for (const [key, route] of allRoutes) {
+    const existing = existingRouteMap.get(key);
+    
+    if (existing) {
+      // Merge operators
+      const mergedOperators = new Set([...existing.operators, ...route.operators]);
+      finalRoutes.push({
+        origin: route.origin,
+        destination: route.destination,
+        operators: Array.from(mergedOperators),
+        codeshares: existing.codeshares || [],
+        aircraft: existing.aircraft || []
+      });
+    } else {
+      // New route from Wikipedia
+      finalRoutes.push({
+        origin: route.origin,
+        destination: route.destination,
+        operators: Array.from(route.operators),
+        codeshares: [],
+        aircraft: []
+      });
+    }
+    
+    processedKeys.add(key);
+  }
+  
+  // Then, keep existing routes that weren't in scraped data
+  // (routes between non-major airports)
+  for (const route of existingRoutes) {
+    const key = `${route.origin}-${route.destination}`;
+    if (!processedKeys.has(key)) {
+      finalRoutes.push(route);
+      processedKeys.add(key);
     }
   }
   
-  console.log(`  Generated ${newRoutes.length} routes (was ${existingRoutes.length})`);
+  // Remove routes with no operators
+  const validRoutes = finalRoutes.filter(r => r.operators && r.operators.length > 0);
   
-  // Step 4: Save updated data
+  console.log(`  Total routes: ${validRoutes.length}`);
+  console.log(`  New routes added: ${validRoutes.length - existingRoutes.length}`);
+  
+  // Step 4: Save
   console.log('\nStep 4: Saving updated routes...');
-  await saveJSON(ROUTES_PATH, newRoutes);
+  await saveJSON(ROUTES_PATH, validRoutes);
   
-  // Also update airlines to mark active status
+  // Update airlines with active flag based on routes
+  const activeAirlines = new Set();
+  for (const route of validRoutes) {
+    for (const op of route.operators) {
+      activeAirlines.add(op);
+    }
+  }
+  
   const updatedAirlines = airlines.map(a => ({
     ...a,
-    active: activeSet.has(a.iata),
+    active: activeAirlines.has(a.iata)
   }));
   await saveJSON(AIRLINES_PATH, updatedAirlines);
   
   console.log('\n=== Update Complete ===');
-  console.log(`Routes: ${existingRoutes.length} -> ${newRoutes.length}`);
-  console.log(`Active airlines: ${activeSet.size}`);
-  console.log(`Defunct airlines removed: ${defunctSet.size}`);
+  console.log(`Routes: ${existingRoutes.length} -> ${validRoutes.length}`);
+  console.log(`Active airlines: ${activeAirlines.size}`);
+  console.log(`Airports scraped: ${successCount}`);
 }
 
 main().catch(console.error);
