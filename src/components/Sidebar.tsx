@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Search, Plane, Building2, Filter, X, ChevronDown, ChevronUp, RotateCcw } from "lucide-react";
+import { Search, Plane, Building2, Filter, X, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, RotateCcw } from "lucide-react";
 import { Airport, Route, Airline, Filters } from "@/types";
 import { cn } from "@/lib/utils";
 
@@ -35,6 +35,7 @@ export default function Sidebar({
   const [showAircraftFilter, setShowAircraftFilter] = useState(false);
   const [airlineSearch, setAirlineSearch] = useState("");
   const [aircraftSearch, setAircraftSearch] = useState("");
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   // Create lookups
   const airlineMap = useMemo(() => {
@@ -160,27 +161,65 @@ export default function Sidebar({
   const hasActiveFilters = filters.airlines.length > 0 || filters.aircraft.length > 0;
 
   return (
-    <div className="w-80 bg-zinc-900 border-r border-zinc-800 flex flex-col h-full overflow-hidden">
-      {/* Header */}
-      <div className="p-4 border-b border-zinc-800">
-        <div className="flex items-center justify-between">
-          <h1 className="text-xl font-bold text-white flex items-center gap-2">
-            <Plane className="w-5 h-5 text-blue-400" />
-            FlightSeek
-          </h1>
-          {(selectedAirport || hasActiveFilters) && (
-            <button
-              onClick={onReset}
-              className="flex items-center gap-1 px-2 py-1 text-xs text-zinc-400 hover:text-white hover:bg-zinc-800 rounded transition-colors"
-              title="Reset all"
-            >
-              <RotateCcw className="w-3 h-3" />
-              Reset
-            </button>
+    <div 
+      className={cn(
+        "bg-zinc-900 border-r border-zinc-800 flex flex-col h-full overflow-hidden transition-all duration-300",
+        isCollapsed ? "w-12" : "w-80"
+      )}
+    >
+      {/* Collapse Toggle Button */}
+      <button
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        className="absolute top-4 left-full -ml-3 z-10 bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white p-1 rounded-r-md border border-l-0 border-zinc-700 transition-colors"
+        title={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+      >
+        {isCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
+      </button>
+
+      {/* Collapsed View */}
+      {isCollapsed ? (
+        <div className="flex flex-col items-center py-4 gap-4">
+          <Plane className="w-5 h-5 text-blue-400" />
+          <button
+            onClick={() => setIsCollapsed(false)}
+            className="text-zinc-400 hover:text-white p-2"
+            title="Search"
+          >
+            <Search className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => setIsCollapsed(false)}
+            className="text-zinc-400 hover:text-white p-2"
+            title="Filters"
+          >
+            <Filter className="w-5 h-5" />
+          </button>
+          {selectedAirport && (
+            <div className="text-amber-400 font-bold text-xs">{selectedAirport.iata}</div>
           )}
         </div>
-        <p className="text-zinc-400 text-sm mt-1">Explore flight routes worldwide</p>
-      </div>
+      ) : (
+        <>
+          {/* Header */}
+          <div className="p-4 border-b border-zinc-800">
+            <div className="flex items-center justify-between">
+              <h1 className="text-xl font-bold text-white flex items-center gap-2">
+                <Plane className="w-5 h-5 text-blue-400" />
+                FlightSeek
+              </h1>
+              {(selectedAirport || hasActiveFilters) && (
+                <button
+                  onClick={onReset}
+                  className="flex items-center gap-1 px-2 py-1 text-xs text-zinc-400 hover:text-white hover:bg-zinc-800 rounded transition-colors"
+                  title="Reset all"
+                >
+                  <RotateCcw className="w-3 h-3" />
+                  Reset
+                </button>
+              )}
+            </div>
+            <p className="text-zinc-400 text-sm mt-1">Explore flight routes worldwide</p>
+          </div>
 
       {/* Search */}
       <div className="p-4 border-b border-zinc-800">
@@ -465,6 +504,8 @@ export default function Sidebar({
           </div>
         )}
       </div>
+        </>
+      )}
     </div>
   );
 }

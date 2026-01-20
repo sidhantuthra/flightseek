@@ -80,7 +80,8 @@ export default function Home() {
 
   return (
     <div className="h-screen w-screen flex overflow-hidden">
-      <Sidebar
+      <div className="relative">
+        <Sidebar
         airports={airports}
         airlines={airlines}
         aircraftTypes={aircraftTypes}
@@ -92,6 +93,7 @@ export default function Home() {
         routesByAirport={routesByAirport}
         onReset={handleReset}
       />
+      </div>
       <div className="flex-1 relative">
         <FlightMap
           airports={airports}

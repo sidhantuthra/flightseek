@@ -59,7 +59,11 @@ export default function FlightMap({
       worldCopyJump: false,
       maxBounds: [[-90, -540], [90, 540]], // Allow extended panning for continuous routes
       maxBoundsViscosity: 1.0,
+      zoomControl: false, // Disable default position
     });
+
+    // Add zoom control to bottom left
+    L.control.zoom({ position: 'bottomleft' }).addTo(map);
 
     // Dark theme tile layer
     L.tileLayer(
@@ -78,7 +82,14 @@ export default function FlightMap({
     mapRef.current = map;
     setMapReady(true);
 
+    // Watch for container resize and invalidate map size
+    const resizeObserver = new ResizeObserver(() => {
+      map.invalidateSize();
+    });
+    resizeObserver.observe(mapContainer.current);
+
     return () => {
+      resizeObserver.disconnect();
       map.remove();
       mapRef.current = null;
     };
