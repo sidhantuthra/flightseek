@@ -3,3084 +3,3598 @@
     "iata": "Q5",
     "icao": "MLA",
     "name": "40-Mile Air",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "8U",
     "icao": "AAW",
     "name": "Afriqiyah Airways",
-    "country": "Libya"
+    "country": "Libya",
+    "active": true
   },
   {
     "iata": "G4",
     "icao": "AAY",
     "name": "Allegiant Air",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "M3",
     "icao": "TUS",
     "name": "ABSA - Aerolinhas Brasileiras",
-    "country": "Brazil"
+    "country": "Brazil",
+    "active": true
   },
   {
     "iata": "8V",
     "icao": "ACP",
     "name": "Astral Aviation",
-    "country": "Kenya"
+    "country": "Kenya",
+    "active": true
   },
   {
     "iata": "8T",
     "icao": "",
     "name": "Air Tindi",
-    "country": "Canadian Territories"
+    "country": "Canadian Territories",
+    "active": true
   },
   {
     "iata": "PE",
     "icao": "AEL",
     "name": "Air Europe",
-    "country": "Italy"
+    "country": "Italy",
+    "active": true
   },
   {
     "iata": "KO",
     "icao": "AER",
     "name": "Alaska Central Express",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "I9",
     "icao": "AEY",
     "name": "Air Italy",
-    "country": "Italy"
+    "country": "Italy",
+    "active": true
   },
   {
     "iata": "SB",
     "icao": "ACI",
     "name": "Air Caledonie International",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "2O",
     "icao": "",
     "name": "Air Salone",
-    "country": "Sierra Leone"
+    "country": "Sierra Leone",
+    "active": true
   },
   {
     "iata": "AI",
     "icao": "AIC",
     "name": "Air India Limited",
-    "country": "India"
+    "country": "India",
+    "active": true
   },
   {
     "iata": "CC",
     "icao": "ABD",
     "name": "Air Atlanta Icelandic",
-    "country": "Iceland"
+    "country": "Iceland",
+    "active": true
   },
   {
     "iata": "TN",
     "icao": "THT",
     "name": "Air Tahiti Nui",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "IZ",
     "icao": "AIZ",
     "name": "Arkia Israel Airlines",
-    "country": "Israel"
+    "country": "Israel",
+    "active": true
   },
   {
     "iata": "NX",
     "icao": "AMU",
     "name": "Air Macau",
-    "country": "Macao"
+    "country": "Macao",
+    "active": true
   },
   {
     "iata": "NH",
     "icao": "ANA",
     "name": "All Nippon Airways",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "PX",
     "icao": "ANG",
     "name": "Air Niugini",
-    "country": "Papua New Guinea"
+    "country": "Papua New Guinea",
+    "active": true
   },
   {
     "iata": "G9",
     "icao": "ABY",
     "name": "Air Arabia",
-    "country": "United Arab Emirates"
+    "country": "United Arab Emirates",
+    "active": true
   },
   {
     "iata": "AC",
     "icao": "ACA",
     "name": "Air Canada",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "BT",
     "icao": "BTI",
     "name": "Air Baltic",
-    "country": "Latvia"
+    "country": "Latvia",
+    "active": true
   },
   {
     "iata": "EL",
     "icao": "ANK",
     "name": "Air Nippon",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "TL",
     "icao": "ANO",
     "name": "Airnorth",
-    "country": "Australia"
+    "country": "Australia",
+    "active": true
   },
   {
     "iata": "4N",
     "icao": "ANT",
     "name": "Air North Charter - Canada",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "NZ",
     "icao": "ANZ",
     "name": "Air New Zealand",
-    "country": "New Zealand"
+    "country": "New Zealand",
+    "active": true
   },
   {
     "iata": "AS",
     "icao": "ASA",
     "name": "Alaska Airlines",
-    "country": "ALASKA"
+    "country": "ALASKA",
+    "active": true
   },
   {
     "iata": "FO",
     "icao": "ATM",
     "name": "Airlines Of Tasmania",
-    "country": "Australia"
+    "country": "Australia",
+    "active": true
   },
   {
     "iata": "PJ",
     "icao": "SPM",
     "name": "Air Saint Pierre",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "AA",
     "icao": "AAL",
     "name": "American Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "OZ",
     "icao": "AAR",
     "name": "Asiana Airlines",
-    "country": "Republic of Korea"
+    "country": "Republic of Korea",
+    "active": true
   },
   {
     "iata": "4K",
     "icao": "AAS",
     "name": "Askari Aviation",
-    "country": "Pakistan"
+    "country": "Pakistan",
+    "active": true
   },
   {
     "iata": "JP",
     "icao": "ADR",
     "name": "Adria Airways",
-    "country": "Slovenia"
+    "country": "Slovenia",
+    "active": true
   },
   {
     "iata": "UX",
     "icao": "AEA",
     "name": "Air Europa",
-    "country": "Spain"
+    "country": "Spain",
+    "active": true
   },
   {
     "iata": "A3",
     "icao": "AEE",
     "name": "Aegean Airlines",
-    "country": "Greece"
+    "country": "Greece",
+    "active": true
   },
   {
     "iata": "FG",
     "icao": "AFG",
     "name": "Ariana Afghan Airlines",
-    "country": "Afghanistan"
+    "country": "Afghanistan",
+    "active": true
   },
   {
     "iata": "SU",
     "icao": "AFL",
     "name": "Aeroflot Russian Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "JA",
     "icao": "BON",
     "name": "Air Bosna",
-    "country": "Bosnia and Herzegovina"
+    "country": "Bosnia and Herzegovina",
+    "active": true
   },
   {
     "iata": "AF",
     "icao": "AFR",
     "name": "Air France",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "PL",
     "icao": "PLI",
     "name": "Aeroper",
-    "country": "Peru"
+    "country": "Peru",
+    "active": true
   },
   {
     "iata": "J2",
     "icao": "AHY",
     "name": "Azerbaijan Airlines",
-    "country": "Azerbaijan"
+    "country": "Azerbaijan",
+    "active": true
   },
   {
     "iata": "AB",
     "icao": "BER",
     "name": "Air Berlin",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "HM",
     "icao": "SEY",
     "name": "Air Seychelles",
-    "country": "Seychelles"
+    "country": "Seychelles",
+    "active": true
   },
   {
     "iata": "AM",
     "icao": "AMX",
     "name": "AeroMéxico",
-    "country": "Mexico"
+    "country": "Mexico",
+    "active": true
   },
   {
     "iata": "GV",
     "icao": "ARF",
     "name": "Aero Flight",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "2B",
     "icao": "ARD",
     "name": "Aerocondor",
-    "country": "Portugal"
+    "country": "Portugal",
+    "active": true
   },
   {
     "iata": "AR",
     "icao": "ARG",
     "name": "Aerolineas Argentinas",
-    "country": "Argentina"
+    "country": "Argentina",
+    "active": true
   },
   {
     "iata": "OB",
     "icao": "ASZ",
     "name": "Astrakhan Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "2J",
     "icao": "VBW",
     "name": "Air Burkina",
-    "country": "Burkina Faso"
+    "country": "Burkina Faso",
+    "active": true
   },
   {
     "iata": "OS",
     "icao": "AUA",
     "name": "Austrian Airlines",
-    "country": "Austria"
+    "country": "Austria",
+    "active": true
   },
   {
     "iata": "GR",
     "icao": "AUR",
     "name": "Aurigny Air Services",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "B9",
     "icao": "BGD",
     "name": "Air Bangladesh",
-    "country": "Bangladesh"
+    "country": "Bangladesh",
+    "active": true
   },
   {
     "iata": "IX",
     "icao": "AXB",
     "name": "Air India Express",
-    "country": "India"
+    "country": "India",
+    "active": true
   },
   {
     "iata": "AZ",
     "icao": "AZA",
     "name": "Alitalia",
-    "country": "Italy"
+    "country": "Italy",
+    "active": true
   },
   {
     "iata": "FV",
     "icao": "SDM",
     "name": "Rossiya-Russian Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "VT",
     "icao": "VTA",
     "name": "Air Tahiti",
-    "country": "French Polynesia"
+    "country": "French Polynesia",
+    "active": true
   },
   {
     "iata": "AH",
     "icao": "DAH",
     "name": "Air Algerie",
-    "country": "Algeria"
+    "country": "Algeria",
+    "active": true
   },
   {
     "iata": "FJ",
     "icao": "FJI",
     "name": "Air Pacific",
-    "country": "Fiji"
+    "country": "Fiji",
+    "active": true
   },
   {
     "iata": "NY",
     "icao": "FXI",
     "name": "Air Iceland",
-    "country": "Iceland"
+    "country": "Iceland",
+    "active": true
   },
   {
     "iata": "W9",
     "icao": "JAB",
     "name": "Air Bagan",
-    "country": "Myanmar"
+    "country": "Myanmar",
+    "active": true
   },
   {
     "iata": "KC",
     "icao": "KZR",
     "name": "Air Astana",
-    "country": "Kazakhstan"
+    "country": "Kazakhstan",
+    "active": true
   },
   {
     "iata": "TD",
     "icao": "LUR",
     "name": "Atlantis European Airways",
-    "country": "Armenia"
+    "country": "Armenia",
+    "active": true
   },
   {
     "iata": "8D",
     "icao": "",
     "name": "Astair",
-    "country": "Russian Federation"
+    "country": "Russian Federation",
+    "active": true
   },
   {
     "iata": "BF",
     "icao": "RSR",
     "name": "Aero-Service",
-    "country": "Republic of the Congo"
+    "country": "Republic of the Congo",
+    "active": true
   },
   {
     "iata": "VW",
     "icao": "TAO",
     "name": "Aeromar",
-    "country": "Mexico"
+    "country": "Mexico",
+    "active": true
   },
   {
     "iata": "TS",
     "icao": "TSC",
     "name": "Air Transat",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "BA",
     "icao": "BAW",
     "name": "British Airways",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "UP",
     "icao": "BHS",
     "name": "Bahamasair",
-    "country": "Bahamas"
+    "country": "Bahamas",
+    "active": true
   },
   {
     "iata": "WW",
     "icao": "BMI",
     "name": "bmibaby",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "7P",
     "icao": "BTV",
     "name": "Metro Batavia",
-    "country": "Indonesia"
+    "country": "Indonesia",
+    "active": true
   },
   {
     "iata": "FB",
     "icao": "LZB",
     "name": "Bulgaria Air",
-    "country": "Bulgaria"
+    "country": "Bulgaria",
+    "active": true
   },
   {
     "iata": "9K",
     "icao": "KAP",
     "name": "Cape Air",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "CX",
     "icao": "CPA",
     "name": "Cathay Pacific",
-    "country": "Hong Kong SAR of China"
+    "country": "Hong Kong SAR of China",
+    "active": true
   },
   {
     "iata": "CI",
     "icao": "CAL",
     "name": "China Airlines",
-    "country": "Taiwan"
+    "country": "Taiwan",
+    "active": true
   },
   {
     "iata": "HR",
     "icao": "CUA",
     "name": "China United Airlines",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "MN",
     "icao": "CAW",
     "name": "Comair",
-    "country": "South Africa"
+    "country": "South Africa",
+    "active": true
   },
   {
     "iata": "CM",
     "icao": "CMP",
     "name": "Copa Airlines",
-    "country": "Panama"
+    "country": "Panama",
+    "active": true
   },
   {
     "iata": "OU",
     "icao": "CTN",
     "name": "Croatia Airlines",
-    "country": "Croatia"
+    "country": "Croatia",
+    "active": true
   },
   {
     "iata": "YK",
     "icao": "",
     "name": "Cyprus Turkish Airlines",
-    "country": "Turkey"
+    "country": "Turkey",
+    "active": true
   },
   {
     "iata": "D3",
     "icao": "DAO",
     "name": "Daallo Airlines",
-    "country": "Djibouti"
+    "country": "Djibouti",
+    "active": true
   },
   {
     "iata": "KB",
     "icao": "DRK",
     "name": "Druk Air",
-    "country": "Bhutan"
+    "country": "Bhutan",
+    "active": true
   },
   {
     "iata": "QU",
     "icao": "UGX",
     "name": "East African",
-    "country": "Uganda"
+    "country": "Uganda",
+    "active": true
   },
   {
     "iata": "LY",
     "icao": "ELY",
     "name": "El Al Israel Airlines",
-    "country": "Israel"
+    "country": "Israel",
+    "active": true
   },
   {
     "iata": "OV",
     "icao": "ELL",
     "name": "Estonian Air",
-    "country": "Estonia"
+    "country": "Estonia",
+    "active": true
   },
   {
     "iata": "RZ",
     "icao": "",
     "name": "Euro Exec Express",
-    "country": "Sweden"
+    "country": "Sweden",
+    "active": true
   },
   {
     "iata": "JN",
     "icao": "XLA",
     "name": "Excel Airways",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "AY",
     "icao": "FIN",
     "name": "Finnair",
-    "country": "Finland"
+    "country": "Finland",
+    "active": true
   },
   {
     "iata": "D7",
     "icao": "XAX",
     "name": "AirAsia X",
-    "country": "Malaysia"
+    "country": "Malaysia",
+    "active": true
   },
   {
     "iata": "F7",
     "icao": "BBO",
     "name": "Flybaboo",
-    "country": "Switzerland"
+    "country": "Switzerland",
+    "active": true
   },
   {
     "iata": "GA",
     "icao": "GIA",
     "name": "Garuda Indonesia",
-    "country": "Indonesia"
+    "country": "Indonesia",
+    "active": true
   },
   {
     "iata": "QB",
     "icao": "GFG",
     "name": "Georgian National Airlines",
-    "country": "Georgia"
+    "country": "Georgia",
+    "active": true
   },
   {
     "iata": "G8",
     "icao": "GOW",
     "name": "Go Air",
-    "country": "India"
+    "country": "India",
+    "active": true
   },
   {
     "iata": "ZK",
     "icao": "GLA",
     "name": "Great Lakes Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "HU",
     "icao": "CHH",
     "name": "Hainan Airlines",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "HA",
     "icao": "HAL",
     "name": "Hawaiian Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "HW",
     "icao": "FHE",
     "name": "Hello",
-    "country": "Switzerland"
+    "country": "Switzerland",
+    "active": true
   },
   {
     "iata": "HD",
     "icao": "ADO",
     "name": "Hokkaido International Airlines",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "IB",
     "icao": "IBE",
     "name": "Iberia Airlines",
-    "country": "Spain"
+    "country": "Spain",
+    "active": true
   },
   {
     "iata": "FI",
     "icao": "ICE",
     "name": "Icelandair",
-    "country": "Iceland"
+    "country": "Iceland",
+    "active": true
   },
   {
     "iata": "QZ",
     "icao": "AWQ",
     "name": "Indonesia AirAsia",
-    "country": "Indonesia"
+    "country": "Indonesia",
+    "active": true
   },
   {
     "iata": "3L",
     "icao": "ISK",
     "name": "Intersky",
-    "country": "Austria"
+    "country": "Austria",
+    "active": true
   },
   {
     "iata": "8L",
     "icao": "CGP",
     "name": "Cargo Plus Aviation",
-    "country": "United Arab Emirates"
+    "country": "United Arab Emirates",
+    "active": true
   },
   {
     "iata": "JL",
     "icao": "JAL",
     "name": "Japan Airlines Domestic",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "J9",
     "icao": "JZR",
     "name": "Jazeera Airways",
-    "country": "Kuwait"
+    "country": "Kuwait",
+    "active": true
   },
   {
     "iata": "3K",
     "icao": "JSA",
     "name": "Jetstar Asia Airways",
-    "country": "Singapore"
+    "country": "Singapore",
+    "active": true
   },
   {
     "iata": "JQ",
     "icao": "JST",
     "name": "Jetstar Airways",
-    "country": "Australia"
+    "country": "Australia",
+    "active": true
   },
   {
     "iata": "RQ",
     "icao": "KMF",
     "name": "Kam Air",
-    "country": "Afghanistan"
+    "country": "Afghanistan",
+    "active": true
   },
   {
     "iata": "Y9",
     "icao": "IRK",
     "name": "Kish Air",
-    "country": "Iran"
+    "country": "Iran",
+    "active": true
   },
   {
     "iata": "LR",
     "icao": "LRC",
     "name": "LACSA",
-    "country": "Costa Rica"
+    "country": "Costa Rica",
+    "active": true
   },
   {
     "iata": "LO",
     "icao": "LOT",
     "name": "LOT Polish Airlines",
-    "country": "Poland"
+    "country": "Poland",
+    "active": true
   },
   {
     "iata": "LN",
     "icao": "LAA",
     "name": "Libyan Arab Airlines",
-    "country": "Libya"
+    "country": "Libya",
+    "active": true
   },
   {
     "iata": "LH",
     "icao": "DLH",
     "name": "Lufthansa",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "MJ",
     "icao": "LPR",
     "name": "L",
-    "country": "Argentina"
+    "country": "Argentina",
+    "active": true
   },
   {
     "iata": "MH",
     "icao": "MAS",
     "name": "Malaysia Airlines",
-    "country": "Malaysia"
+    "country": "Malaysia",
+    "active": true
   },
   {
     "iata": "AE",
     "icao": "MDA",
     "name": "Mandarin Airlines",
-    "country": "Taiwan"
+    "country": "Taiwan",
+    "active": true
   },
   {
     "iata": "MW",
     "icao": "MYD",
     "name": "Maya Island Air",
-    "country": "Belize"
+    "country": "Belize",
+    "active": true
   },
   {
     "iata": "MY",
     "icao": "MWA",
     "name": "Midwest Airlines (Egypt)",
-    "country": "Egypt"
+    "country": "Egypt",
+    "active": true
   },
   {
     "iata": "YM",
     "icao": "MGX",
     "name": "Montenegro Airlines",
-    "country": "Montenegro"
+    "country": "Montenegro",
+    "active": true
   },
   {
     "iata": "8M",
     "icao": "MMM",
     "name": "Myanmar Airways International",
-    "country": "Myanmar"
+    "country": "Myanmar",
+    "active": true
   },
   {
     "iata": "ON",
     "icao": "RON",
     "name": "Nauru Air Corporation",
-    "country": "Nauru"
+    "country": "Nauru",
+    "active": true
   },
   {
     "iata": "HG",
     "icao": "NLY",
     "name": "Niki",
-    "country": "Austria"
+    "country": "Austria",
+    "active": true
   },
   {
     "iata": "J3",
     "icao": "PLR",
     "name": "Northwestern Air",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "XY",
     "icao": "KNE",
     "name": "Nas Air",
-    "country": "Saudi Arabia"
+    "country": "Saudi Arabia",
+    "active": true
   },
   {
     "iata": "WY",
     "icao": "OMA",
     "name": "Oman Air",
-    "country": "Oman"
+    "country": "Oman",
+    "active": true
   },
   {
     "iata": "R2",
     "icao": "ORB",
     "name": "Orenburg Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "PV",
     "icao": "PNR",
     "name": "PAN Air",
-    "country": "Spain"
+    "country": "Spain",
+    "active": true
   },
   {
     "iata": "8P",
     "icao": "PCO",
     "name": "Pacific Coastal Airline",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "PK",
     "icao": "PIA",
     "name": "Pakistan International Airlines",
-    "country": "Pakistan"
+    "country": "Pakistan",
+    "active": true
   },
   {
     "iata": "PR",
     "icao": "PAL",
     "name": "Philippine Airlines",
-    "country": "Philippines"
+    "country": "Philippines",
+    "active": true
   },
   {
     "iata": "PD",
     "icao": "POE",
     "name": "Porter Airlines",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "P0",
     "icao": "",
     "name": "Proflight Commuter Services",
-    "country": "Zambia"
+    "country": "Zambia",
+    "active": true
   },
   {
     "iata": "ZL",
     "icao": "RXA",
     "name": "Regional Express",
-    "country": "Australia"
+    "country": "Australia",
+    "active": true
   },
   {
     "iata": "BI",
     "icao": "RBA",
     "name": "Royal Brunei Airlines",
-    "country": "Brunei"
+    "country": "Brunei",
+    "active": true
   },
   {
     "iata": "WB",
     "icao": "RWD",
     "name": "Rwandair Express",
-    "country": "Rwanda"
+    "country": "Rwanda",
+    "active": true
   },
   {
     "iata": "SA",
     "icao": "SAA",
     "name": "South African Airways",
-    "country": "South Africa"
+    "country": "South Africa",
+    "active": true
   },
   {
     "iata": "SK",
     "icao": "SAS",
     "name": "Scandinavian Airlines System",
-    "country": "Sweden"
+    "country": "Sweden",
+    "active": true
   },
   {
     "iata": "UL",
     "icao": "ALK",
     "name": "SriLankan Airlines",
-    "country": "Sri Lanka"
+    "country": "Sri Lanka",
+    "active": true
   },
   {
     "iata": "SG",
     "icao": "SEJ",
     "name": "Spicejet",
-    "country": "India"
+    "country": "India",
+    "active": true
   },
   {
     "iata": "SQ",
     "icao": "SIA",
     "name": "Singapore Airlines",
-    "country": "Singapore"
+    "country": "Singapore",
+    "active": true
   },
   {
     "iata": "SJ",
     "icao": "SJY",
     "name": "Sriwijaya Air",
-    "country": "Indonesia"
+    "country": "Indonesia",
+    "active": true
   },
   {
     "iata": "5G",
     "icao": "SSV",
     "name": "Skyservice Airlines",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "SV",
     "icao": "SVA",
     "name": "Saudi Arabian Airlines",
-    "country": "Saudi Arabia"
+    "country": "Saudi Arabia",
+    "active": true
   },
   {
     "iata": "LX",
     "icao": "SWR",
     "name": "Swiss International Air Lines",
-    "country": "Switzerland"
+    "country": "Switzerland",
+    "active": true
   },
   {
     "iata": "SC",
     "icao": "CDG",
     "name": "Shandong Airlines",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "ZH",
     "icao": "CSZ",
     "name": "Shenzhen Airlines",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "S3",
     "icao": "BBR",
     "name": "Santa Barbara Airlines",
-    "country": "Venezuela"
+    "country": "Venezuela",
+    "active": true
   },
   {
     "iata": "MI",
     "icao": "SLK",
     "name": "SilkAir",
-    "country": "Singapore"
+    "country": "Singapore",
+    "active": true
   },
   {
     "iata": "HZ",
     "icao": "SOZ",
     "name": "Sat Airlines",
-    "country": "Kazakhstan"
+    "country": "Kazakhstan",
+    "active": true
   },
   {
     "iata": "EQ",
     "icao": "TAE",
     "name": "TAME",
-    "country": "Ecuador"
+    "country": "Ecuador",
+    "active": true
   },
   {
     "iata": "TR",
     "icao": "TGW",
     "name": "Tiger Airways",
-    "country": "Singapore"
+    "country": "Singapore",
+    "active": true
   },
   {
     "iata": "FD",
     "icao": "AIQ",
     "name": "Thai AirAsia",
-    "country": "Thailand"
+    "country": "Thailand",
+    "active": true
   },
   {
     "iata": "TL",
     "icao": "TMA",
     "name": "Trans Mediterranean Airlines",
-    "country": "Lebanon"
+    "country": "Lebanon",
+    "active": true
   },
   {
     "iata": "GE",
     "icao": "TNA",
     "name": "TransAsia Airways",
-    "country": "Taiwan"
+    "country": "Taiwan",
+    "active": true
   },
   {
     "iata": "UN",
     "icao": "TSO",
     "name": "Transaero Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "QS",
     "icao": "TVS",
     "name": "Travel Service",
-    "country": "Czech Republic"
+    "country": "Czech Republic",
+    "active": true
   },
   {
     "iata": "RO",
     "icao": "ROT",
     "name": "Tarom",
-    "country": "Romania"
+    "country": "Romania",
+    "active": true
   },
   {
     "iata": "U6",
     "icao": "SVR",
     "name": "Ural Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "PS",
     "icao": "AUI",
     "name": "Ukraine International Airlines",
-    "country": "Ukraine"
+    "country": "Ukraine",
+    "active": true
   },
   {
     "iata": "VN",
     "icao": "HVN",
     "name": "Vietnam Airlines",
-    "country": "Vietnam"
+    "country": "Vietnam",
+    "active": true
   },
   {
     "iata": "TV",
     "icao": "VEX",
     "name": "Virgin Express",
-    "country": "Belgium"
+    "country": "Belgium",
+    "active": true
   },
   {
     "iata": "LC",
     "icao": "VLO",
     "name": "Varig Log",
-    "country": "Brazil"
+    "country": "Brazil",
+    "active": true
   },
   {
     "iata": "WS",
     "icao": "WJA",
     "name": "WestJet",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "SE",
     "icao": "SEU",
     "name": "XL Airways France",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "Z4",
     "icao": "OOM",
     "name": "Zoom Airlines",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "6T",
     "icao": "",
     "name": "Air Mandalay",
-    "country": "Burma"
+    "country": "Burma",
+    "active": true
   },
   {
     "iata": "2I",
     "icao": "",
     "name": "Star Peru (2I)",
-    "country": "Peru"
+    "country": "Peru",
+    "active": true
   },
   {
     "iata": "TO",
     "icao": "TVF",
     "name": "Transavia France",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "7J",
     "icao": "",
     "name": "Tajik Air",
-    "country": "Tajikistan"
+    "country": "Tajikistan",
+    "active": true
   },
   {
     "iata": "Z2",
     "icao": "",
     "name": "Zest Air",
-    "country": "Philippines"
+    "country": "Philippines",
+    "active": true
   },
   {
     "iata": "LJ",
     "icao": "JNA",
     "name": "Jin Air",
-    "country": "South Korea"
+    "country": "South Korea",
+    "active": true
   },
   {
     "iata": "CN",
     "icao": "YCP",
     "name": "Canadian National Airways",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "DH",
     "icao": "DSY",
     "name": "Dennis Sky",
-    "country": "Israel"
+    "country": "Israel",
+    "active": true
   },
   {
     "iata": "J4",
     "icao": "",
     "name": "ALAK",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "K5",
     "icao": "SQH",
     "name": "SeaPort Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "J5",
     "icao": "",
     "name": "Alaska Seaplane Service",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "P9",
     "icao": "",
     "name": "Peruvian Airlines",
-    "country": "Peru"
+    "country": "Peru",
+    "active": true
   },
   {
     "iata": "K8",
     "icao": "",
     "name": "Zambia Skyways",
-    "country": "Zambia"
+    "country": "Zambia",
+    "active": true
   },
   {
     "iata": "Q9",
     "icao": "NAK",
     "name": "Arik Niger",
-    "country": "Niger"
+    "country": "Niger",
+    "active": true
   },
   {
     "iata": "DZ",
     "icao": "",
     "name": "Starline.kz",
-    "country": "Kazakhstan"
+    "country": "Kazakhstan",
+    "active": true
   },
   {
     "iata": "Q2",
     "icao": "",
     "name": "Maldivian",
-    "country": "Maldives"
+    "country": "Maldives",
+    "active": true
   },
   {
     "iata": "KY",
     "icao": "KSY",
     "name": "KSY",
-    "country": "Greece"
+    "country": "Greece",
+    "active": true
   },
   {
     "iata": "GK",
     "icao": "",
     "name": "Genesis",
-    "country": "Pakistan"
+    "country": "Pakistan",
+    "active": true
   },
   {
     "iata": "UR",
     "icao": "",
     "name": "UTair-Express",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "9C",
     "icao": "",
     "name": "China SSS",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "WM",
     "icao": "",
     "name": "Windward Islands Airways",
-    "country": "Netherlands Antilles"
+    "country": "Netherlands Antilles",
+    "active": true
   },
   {
     "iata": "QC",
     "icao": "",
     "name": "Camair-co",
-    "country": "Cameroon"
+    "country": "Cameroon",
+    "active": true
   },
   {
     "iata": "TW",
     "icao": "TWB",
     "name": "Tway Airlines",
-    "country": "South Korea"
+    "country": "South Korea",
+    "active": true
   },
   {
     "iata": "7H",
     "icao": "ERR",
     "name": "Era Alaska",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "L6",
     "icao": "MAI",
     "name": "Mauritania Airlines International",
-    "country": "Mauritania"
+    "country": "Mauritania",
+    "active": true
   },
   {
     "iata": "Y5",
     "icao": "AWA",
     "name": "Asia Wings",
-    "country": "Kazakhstan"
+    "country": "Kazakhstan",
+    "active": true
   },
   {
     "iata": "6I",
     "icao": "",
     "name": "Fly 6ix",
-    "country": "Sierra Leone"
+    "country": "Sierra Leone",
+    "active": true
   },
   {
     "iata": "MM",
     "icao": "",
     "name": "Peach Aviation",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "P4",
     "icao": "",
     "name": "Patriot Airways",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "SX",
     "icao": "",
     "name": "SkyWork Airlines",
-    "country": "Switzerland"
+    "country": "Switzerland",
+    "active": true
   },
   {
     "iata": "OD",
     "icao": "MXD",
     "name": "Malindo Air",
-    "country": "Malaysia"
+    "country": "Malaysia",
+    "active": true
   },
   {
     "iata": "5Z",
     "icao": "VVC",
     "name": "VivaColombia",
-    "country": "Colombia"
+    "country": "Colombia",
+    "active": true
   },
   {
     "iata": "LT",
     "icao": "LTU",
     "name": "Air Lituanica",
-    "country": "Lithuania"
+    "country": "Lithuania",
+    "active": true
   },
   {
     "iata": "9N",
     "icao": "N78",
     "name": "Regional Air Iceland",
-    "country": "Iceland"
+    "country": "Iceland",
+    "active": true
   },
   {
     "iata": "E2",
     "icao": "",
     "name": "Eagle Atlantic Airlines",
-    "country": "Ghana"
+    "country": "Ghana",
+    "active": true
   },
   {
     "iata": "W3",
     "icao": "WSS",
     "name": "World Scale Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "MO",
     "icao": "AUH",
     "name": "Abu Dhabi Amiri Flight",
-    "country": "United Arab Emirates"
+    "country": "United Arab Emirates",
+    "active": true
   },
   {
     "iata": "5N",
     "icao": "AUL",
     "name": "Aeroflot-Nord",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "AV",
     "icao": "AVA",
     "name": "Avianca - Aerovias Nacionales de Colombia",
-    "country": "AVIANCA"
+    "country": "AVIANCA",
+    "active": true
   },
   {
     "iata": "NF",
     "icao": "AVN",
     "name": "Air Vanuatu",
-    "country": "Vanuatu"
+    "country": "Vanuatu",
+    "active": true
   },
   {
     "iata": "7E",
     "icao": "AWU",
     "name": "Aeroline GmbH",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "TX",
     "icao": "FWI",
     "name": "Air Caraïbes",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "AK",
     "icao": "AXM",
     "name": "AirAsia",
-    "country": "Malaysia"
+    "country": "Malaysia",
+    "active": true
   },
   {
     "iata": "3G",
     "icao": "AYZ",
     "name": "Atlant-Soyuz Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "Z8",
     "icao": "AZN",
     "name": "Amaszonas",
-    "country": "Bolivia"
+    "country": "Bolivia",
+    "active": true
   },
   {
     "iata": "UM",
     "icao": "AZW",
     "name": "Air Zimbabwe",
-    "country": "Zimbabwe"
+    "country": "Zimbabwe",
+    "active": true
   },
   {
     "iata": "R7",
     "icao": "OCA",
     "name": "Aserca Airlines",
-    "country": "Venezuela"
+    "country": "Venezuela",
+    "active": true
   },
   {
     "iata": "BP",
     "icao": "BOT",
     "name": "Air Botswana",
-    "country": "Botswana"
+    "country": "Botswana",
+    "active": true
   },
   {
     "iata": "GS",
     "icao": "UPA",
     "name": "Air Foyle",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "CA",
     "icao": "CCA",
     "name": "Air China",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "Q6",
     "icao": "CDP",
     "name": "Aero Condor Peru",
-    "country": "Peru"
+    "country": "Peru",
+    "active": true
   },
   {
     "iata": "EN",
     "icao": "DLA",
     "name": "Air Dolomiti",
-    "country": "Italy"
+    "country": "Italy",
+    "active": true
   },
   {
     "iata": "EI",
     "icao": "EIN",
     "name": "Aer Lingus",
-    "country": "Ireland"
+    "country": "Ireland",
+    "active": true
   },
   {
     "iata": "RC",
     "icao": "FLI",
     "name": "Atlantic Airways",
-    "country": "Faroe Islands"
+    "country": "Faroe Islands",
+    "active": true
   },
   {
     "iata": "QH",
     "icao": "FLZ",
     "name": "Air Florida",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "2P",
     "icao": "GAP",
     "name": "Air Philippines",
-    "country": "Philippines"
+    "country": "Philippines",
+    "active": true
   },
   {
     "iata": "GL",
     "icao": "GRL",
     "name": "Air Greenland",
-    "country": "Denmark"
+    "country": "Denmark",
+    "active": true
   },
   {
     "iata": "KK",
     "icao": "KKK",
     "name": "Atlasjet",
-    "country": "Turkey"
+    "country": "Turkey",
+    "active": true
   },
   {
     "iata": "JS",
     "icao": "KOR",
     "name": "Air Koryo",
-    "country": "Democratic People's Republic of Korea"
+    "country": "Democratic People's Republic of Korea",
+    "active": true
   },
   {
     "iata": "LV",
     "icao": "LBC",
     "name": "Albanian Airlines",
-    "country": "Albania"
+    "country": "Albania",
+    "active": true
   },
   {
     "iata": "XL",
     "icao": "LNE",
     "name": "Aerolane",
-    "country": "Ecuador"
+    "country": "Ecuador",
+    "active": true
   },
   {
     "iata": "MK",
     "icao": "MAU",
     "name": "Air Mauritius",
-    "country": "Mauritius"
+    "country": "Mauritius",
+    "active": true
   },
   {
     "iata": "MD",
     "icao": "MDG",
     "name": "Air Madagascar",
-    "country": "Madagascar"
+    "country": "Madagascar",
+    "active": true
   },
   {
     "iata": "UU",
     "icao": "REU",
     "name": "Air Austral",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "A5",
     "icao": "RLA",
     "name": "Airlinair",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "QL",
     "icao": "RLN",
     "name": "Aero Lanka",
-    "country": "Sri Lanka"
+    "country": "Sri Lanka",
+    "active": true
   },
   {
     "iata": "Z3",
     "icao": "SMJ",
     "name": "Avient Aviation",
-    "country": "Zimbabwe"
+    "country": "Zimbabwe",
+    "active": true
   },
   {
     "iata": "R3",
     "icao": "SYL",
     "name": "Aircompany Yakutia",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "OR",
     "icao": "TFL",
     "name": "Arkefly",
-    "country": "Netherlands"
+    "country": "Netherlands",
+    "active": true
   },
   {
     "iata": "CG",
     "icao": "TOK",
     "name": "Airlines PNG",
-    "country": "Papua New Guinea"
+    "country": "Papua New Guinea",
+    "active": true
   },
   {
     "iata": "FL",
     "icao": "TRS",
     "name": "AirTran Airways",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "2K",
     "icao": "GLG",
     "name": "Aerolineas Galapagos (Aerogal)",
-    "country": "Ecuador"
+    "country": "Ecuador",
+    "active": true
   },
   {
     "iata": "6R",
     "icao": "DRU",
     "name": "Alrosa Mirny Air Enterprise",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "BG",
     "icao": "BBC",
     "name": "Biman Bangladesh Airlines",
-    "country": "Bangladesh"
+    "country": "Bangladesh",
+    "active": true
   },
   {
     "iata": "4T",
     "icao": "BHP",
     "name": "Belair Airlines",
-    "country": "Switzerland"
+    "country": "Switzerland",
+    "active": true
   },
   {
     "iata": "PG",
     "icao": "BKP",
     "name": "Bangkok Airways",
-    "country": "Thailand"
+    "country": "Thailand",
+    "active": true
   },
   {
     "iata": "JV",
     "icao": "BLS",
     "name": "Bearskin Lake Air Service",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "BV",
     "icao": "BPA",
     "name": "Blue Panorama Airlines",
-    "country": "Italy"
+    "country": "Italy",
+    "active": true
   },
   {
     "iata": "8E",
     "icao": "BRG",
     "name": "Bering Air",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "B2",
     "icao": "BRU",
     "name": "Belavia Belarusian Airlines",
-    "country": "Belarus"
+    "country": "Belarus",
+    "active": true
   },
   {
     "iata": "SN",
     "icao": "DAT",
     "name": "Brussels Airlines",
-    "country": "Belgium"
+    "country": "Belgium",
+    "active": true
   },
   {
     "iata": "NT",
     "icao": "IBB",
     "name": "Binter Canarias",
-    "country": "Spain"
+    "country": "Spain",
+    "active": true
   },
   {
     "iata": "5C",
     "icao": "ICL",
     "name": "CAL Cargo Air Lines",
-    "country": "Israel"
+    "country": "Israel",
+    "active": true
   },
   {
     "iata": "5T",
     "icao": "MPE",
     "name": "Canadian North",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "BW",
     "icao": "BWA",
     "name": "Caribbean Airlines",
-    "country": "Trinidad and Tobago"
+    "country": "Trinidad and Tobago",
+    "active": true
   },
   {
     "iata": "V3",
     "icao": "KRP",
     "name": "Carpatair",
-    "country": "Romania"
+    "country": "Romania",
+    "active": true
   },
   {
     "iata": "KX",
     "icao": "CAY",
     "name": "Cayman Airways",
-    "country": "Cayman Islands"
+    "country": "Cayman Islands",
+    "active": true
   },
   {
     "iata": "5J",
     "icao": "CEB",
     "name": "Cebu Pacific",
-    "country": "Philippines"
+    "country": "Philippines",
+    "active": true
   },
   {
     "iata": "MU",
     "icao": "CES",
     "name": "China Eastern Airlines",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "CZ",
     "icao": "CSN",
     "name": "China Southern Airlines",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "G3",
     "icao": "CIX",
     "name": "City Connexion Airlines",
-    "country": "Burundi"
+    "country": "Burundi",
+    "active": true
   },
   {
     "iata": "WX",
     "icao": "BCY",
     "name": "CityJet",
-    "country": "Ireland"
+    "country": "Ireland",
+    "active": true
   },
   {
     "iata": "KR",
     "icao": "CWK",
     "name": "Comores Airlines",
-    "country": "Comoros"
+    "country": "Comoros",
+    "active": true
   },
   {
     "iata": "DE",
     "icao": "CFG",
     "name": "Condor Flugdienst",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "V0",
     "icao": "VCV",
     "name": "Conviasa",
-    "country": "Venezuela"
+    "country": "Venezuela",
+    "active": true
   },
   {
     "iata": "SS",
     "icao": "CRL",
     "name": "Corsairfly",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "XK",
     "icao": "CCM",
     "name": "Corse-Mediterranee",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "CU",
     "icao": "CUB",
     "name": "Cubana de Aviación",
-    "country": "Cuba"
+    "country": "Cuba",
+    "active": true
   },
   {
     "iata": "CY",
     "icao": "CYP",
     "name": "Cyprus Airways",
-    "country": "Cyprus"
+    "country": "Cyprus",
+    "active": true
   },
   {
     "iata": "OK",
     "icao": "CSA",
     "name": "Czech Airlines",
-    "country": "Czech Republic"
+    "country": "Czech Republic",
+    "active": true
   },
   {
     "iata": "DX",
     "icao": "DTR",
     "name": "DAT Danish Air Transport",
-    "country": "Denmark"
+    "country": "Denmark",
+    "active": true
   },
   {
     "iata": "DL",
     "icao": "DAL",
     "name": "Delta Air Lines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "KA",
     "icao": "HDA",
     "name": "Dragonair",
-    "country": "DRAGON"
+    "country": "DRAGON",
+    "active": true
   },
   {
     "iata": "BR",
     "icao": "EVA",
     "name": "EVA Air",
-    "country": "Taiwan"
+    "country": "Taiwan",
+    "active": true
   },
   {
     "iata": "H7",
     "icao": "",
     "name": "Eagle Air",
-    "country": "Uganda"
+    "country": "Uganda",
+    "active": true
   },
   {
     "iata": "T3",
     "icao": "EZE",
     "name": "Eastern Airways",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "MS",
     "icao": "MSR",
     "name": "Egyptair",
-    "country": "Egypt"
+    "country": "Egypt",
+    "active": true
   },
   {
     "iata": "EK",
     "icao": "UAE",
     "name": "Emirates",
-    "country": "United Arab Emirates"
+    "country": "United Arab Emirates",
+    "active": true
   },
   {
     "iata": "EU",
     "icao": "EEA",
     "name": "Empresa Ecuatoriana De Aviacion",
-    "country": "Ecuador"
+    "country": "Ecuador",
+    "active": true
   },
   {
     "iata": "ET",
     "icao": "ETH",
     "name": "Ethiopian Airlines",
-    "country": "Ethiopia"
+    "country": "Ethiopia",
+    "active": true
   },
   {
     "iata": "EY",
     "icao": "ETD",
     "name": "Etihad Airways",
-    "country": "United Arab Emirates"
+    "country": "United Arab Emirates",
+    "active": true
   },
   {
     "iata": "K2",
     "icao": "ELO",
     "name": "Eurolot",
-    "country": "Poland"
+    "country": "Poland",
+    "active": true
   },
   {
     "iata": "EW",
     "icao": "EWG",
     "name": "Eurowings",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "EO",
     "icao": "LHN",
     "name": "Express One International",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "U2",
     "icao": "EZY",
     "name": "easyJet",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "FY",
     "icao": "FFM",
     "name": "Firefly",
-    "country": "Malaysia"
+    "country": "Malaysia",
+    "active": true
   },
   {
     "iata": "7F",
     "icao": "FAB",
     "name": "First Air",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "B5",
     "icao": "FLT",
     "name": "Flightline",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "TE",
     "icao": "LIL",
     "name": "FlyLal",
-    "country": "Lithuania"
+    "country": "Lithuania",
+    "active": true
   },
   {
     "iata": "LF",
     "icao": "NDC",
     "name": "FlyNordic",
-    "country": "Sweden"
+    "country": "Sweden",
+    "active": true
   },
   {
     "iata": "BE",
     "icao": "BEE",
     "name": "Flybe",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "VY",
     "icao": "FOS",
     "name": "Formosa Airlines",
-    "country": "Taiwan"
+    "country": "Taiwan",
+    "active": true
   },
   {
     "iata": "F9",
     "icao": "FFT",
     "name": "Frontier Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "4G",
     "icao": "GZP",
     "name": "Gazpromavia",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "A9",
     "icao": "TGZ",
     "name": "Georgian Airways",
-    "country": "Georgia"
+    "country": "Georgia",
+    "active": true
   },
   {
     "iata": "ST",
     "icao": "GMI",
     "name": "Germania",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "4U",
     "icao": "GWI",
     "name": "Germanwings",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "G3",
     "icao": "GLO",
     "name": "Gol Transportes Aéreos",
-    "country": "Brazil"
+    "country": "Brazil",
+    "active": true
   },
   {
     "iata": "DC",
     "icao": "GAO",
     "name": "Golden Air",
-    "country": "Sweden"
+    "country": "Sweden",
+    "active": true
   },
   {
     "iata": "TA",
     "icao": "TAT",
     "name": "Grupo TACA",
-    "country": "Costa Rica"
+    "country": "Costa Rica",
+    "active": true
   },
   {
     "iata": "GF",
     "icao": "GBA",
     "name": "Gulf Air Bahrain",
-    "country": "Bahrain"
+    "country": "Bahrain",
+    "active": true
   },
   {
     "iata": "X3",
     "icao": "HLX",
     "name": "TUIfly",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "HF",
     "icao": "HLF",
     "name": "Hapagfly",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "BH",
     "icao": "",
     "name": "Hawkair",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "JB",
     "icao": "JBA",
     "name": "Helijet",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "2L",
     "icao": "OAW",
     "name": "Helvetic Airways",
-    "country": "Switzerland"
+    "country": "Switzerland",
+    "active": true
   },
   {
     "iata": "UD",
     "icao": "HER",
     "name": "Hex'Air",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "HX",
     "icao": "CRK",
     "name": "Hong Kong Airlines",
-    "country": "Hong Kong SAR of China"
+    "country": "Hong Kong SAR of China",
+    "active": true
   },
   {
     "iata": "UO",
     "icao": "HKE",
     "name": "Hong Kong Express Airways",
-    "country": "Hong Kong SAR of China"
+    "country": "Hong Kong SAR of China",
+    "active": true
   },
   {
     "iata": "TY",
     "icao": "IWD",
     "name": "Iberworld",
-    "country": "Spain"
+    "country": "Spain",
+    "active": true
   },
   {
     "iata": "FW",
     "icao": "IBX",
     "name": "Ibex Airlines",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "6E",
     "icao": "IGO",
     "name": "IndiGo Airlines",
-    "country": "India"
+    "country": "India",
+    "active": true
   },
   {
     "iata": "I9",
     "icao": "IBU",
     "name": "Indigo",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "D6",
     "icao": "ILN",
     "name": "Interair South Africa",
-    "country": "South Africa"
+    "country": "South Africa",
+    "active": true
   },
   {
     "iata": "ID",
     "icao": "ITK",
     "name": "Interlink Airlines",
-    "country": "South Africa"
+    "country": "South Africa",
+    "active": true
   },
   {
     "iata": "IR",
     "icao": "IRA",
     "name": "Iran Air",
-    "country": "Iran"
+    "country": "Iran",
+    "active": true
   },
   {
     "iata": "EP",
     "icao": "IRC",
     "name": "Iran Aseman Airlines",
-    "country": "Iran"
+    "country": "Iran",
+    "active": true
   },
   {
     "iata": "6H",
     "icao": "ISR",
     "name": "Israir",
-    "country": "Israel"
+    "country": "Israel",
+    "active": true
   },
   {
     "iata": "JL",
     "icao": "JAL",
     "name": "Japan Airlines",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "EG",
     "icao": "JAA",
     "name": "Japan Asia Airways",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "NU",
     "icao": "JTA",
     "name": "Japan Transocean Air",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "7C",
     "icao": "JJA",
     "name": "Jeju Air",
-    "country": "Republic of Korea"
+    "country": "Republic of Korea",
+    "active": true
   },
   {
     "iata": "9W",
     "icao": "JAI",
     "name": "Jet Airways",
-    "country": "India"
+    "country": "India",
+    "active": true
   },
   {
     "iata": "LS",
     "icao": "EXS",
     "name": "Jet2.com",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "B6",
     "icao": "JBU",
     "name": "JetBlue Airways",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "HO",
     "icao": "DKH",
     "name": "Juneyao Airlines",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "KL",
     "icao": "KLM",
     "name": "KLM Royal Dutch Airlines",
-    "country": "Netherlands"
+    "country": "Netherlands",
+    "active": true
   },
   {
     "iata": "M5",
     "icao": "KEN",
     "name": "Kenmore Air",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "KQ",
     "icao": "KQA",
     "name": "Kenya Airways",
-    "country": "Kenya"
+    "country": "Kenya",
+    "active": true
   },
   {
     "iata": "KE",
     "icao": "KAL",
     "name": "Korean Air",
-    "country": "Republic of Korea"
+    "country": "Republic of Korea",
+    "active": true
   },
   {
     "iata": "KU",
     "icao": "KAC",
     "name": "Kuwait Airways",
-    "country": "Kuwait"
+    "country": "Kuwait",
+    "active": true
   },
   {
     "iata": "LA",
     "icao": "LAN",
     "name": "LAN Airlines",
-    "country": "Chile"
+    "country": "Chile",
+    "active": true
   },
   {
     "iata": "4M",
     "icao": "DSM",
     "name": "LAN Argentina",
-    "country": "Argentina"
+    "country": "Argentina",
+    "active": true
   },
   {
     "iata": "QV",
     "icao": "LAO",
     "name": "Lao Airlines",
-    "country": "Lao Peoples Democratic Republic"
+    "country": "Lao Peoples Democratic Republic",
+    "active": true
   },
   {
     "iata": "LI",
     "icao": "LIA",
     "name": "Leeward Islands Air Transport",
-    "country": "Antigua and Barbuda"
+    "country": "Antigua and Barbuda",
+    "active": true
   },
   {
     "iata": "LM",
     "icao": "LAM",
     "name": "Linhas A",
-    "country": "Mozambique"
+    "country": "Mozambique",
+    "active": true
   },
   {
     "iata": "JT",
     "icao": "LNI",
     "name": "Lion Mentari Airlines",
-    "country": "Indonesia"
+    "country": "Indonesia",
+    "active": true
   },
   {
     "iata": "LH",
     "icao": "GEC",
     "name": "Lufthansa Cargo",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "LG",
     "icao": "LGL",
     "name": "Luxair",
-    "country": "Luxembourg"
+    "country": "Luxembourg",
+    "active": true
   },
   {
     "iata": "CC",
     "icao": "MCK",
     "name": "Macair Airlines",
-    "country": "Australia"
+    "country": "Australia",
+    "active": true
   },
   {
     "iata": "W5",
     "icao": "IRM",
     "name": "Mahan Air",
-    "country": "Iran"
+    "country": "Iran",
+    "active": true
   },
   {
     "iata": "TF",
     "icao": "SCW",
     "name": "Malmö Aviation",
-    "country": "Sweden"
+    "country": "Sweden",
+    "active": true
   },
   {
     "iata": "RI",
     "icao": "MDL",
     "name": "Mandala Airlines",
-    "country": "Indonesia"
+    "country": "Indonesia",
+    "active": true
   },
   {
     "iata": "JE",
     "icao": "MNO",
     "name": "Mango",
-    "country": "South Africa"
+    "country": "South Africa",
+    "active": true
   },
   {
     "iata": "8M",
     "icao": "MXL",
     "name": "Maxair",
-    "country": "Sweden"
+    "country": "Sweden",
+    "active": true
   },
   {
     "iata": "IG",
     "icao": "ISS",
     "name": "Meridiana",
-    "country": "Italy"
+    "country": "Italy",
+    "active": true
   },
   {
     "iata": "ME",
     "icao": "MEA",
     "name": "Middle East Airlines",
-    "country": "Lebanon"
+    "country": "Lebanon",
+    "active": true
   },
   {
     "iata": "ZB",
     "icao": "MON",
     "name": "Monarch Airlines",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "8I",
     "icao": "",
     "name": "Myway Airlines",
-    "country": "Italy"
+    "country": "Italy",
+    "active": true
   },
   {
     "iata": "3R",
     "icao": "GAI",
     "name": "Moskovia Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "M9",
     "icao": "MSI",
     "name": "Motor Sich",
-    "country": "Ukraine"
+    "country": "Ukraine",
+    "active": true
   },
   {
     "iata": "UE",
     "icao": "NAS",
     "name": "Nasair",
-    "country": "Eritrea"
+    "country": "Eritrea",
+    "active": true
   },
   {
     "iata": "CE",
     "icao": "NTW",
     "name": "Nationwide Airlines",
-    "country": "South Africa"
+    "country": "South Africa",
+    "active": true
   },
   {
     "iata": "RA",
     "icao": "RNA",
     "name": "Nepal Airlines",
-    "country": "Nepal"
+    "country": "Nepal",
+    "active": true
   },
   {
     "iata": "2N",
     "icao": "NTJ",
     "name": "NextJet",
-    "country": "Sweden"
+    "country": "Sweden",
+    "active": true
   },
   {
     "iata": "DD",
     "icao": "NOK",
     "name": "Nok Air",
-    "country": "Thailand"
+    "country": "Thailand",
+    "active": true
   },
   {
     "iata": "U7",
     "icao": "",
     "name": "Northern Dene Airways",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "DY",
     "icao": "NAX",
     "name": "Norwegian Air Shuttle",
-    "country": "Norway"
+    "country": "Norway",
+    "active": true
   },
   {
     "iata": "BJ",
     "icao": "LBT",
     "name": "Nouvel Air Tunisie",
-    "country": "Tunisia"
+    "country": "Tunisia",
+    "active": true
   },
   {
     "iata": "O6",
     "icao": "ONE",
     "name": "Oceanair",
-    "country": "Brazil"
+    "country": "Brazil",
+    "active": true
   },
   {
     "iata": "OA",
     "icao": "OAL",
     "name": "Olympic Airlines",
-    "country": "Greece"
+    "country": "Greece",
+    "active": true
   },
   {
     "iata": "OY",
     "icao": "OAE",
     "name": "Omni Air International",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "8Q",
     "icao": "OHY",
     "name": "Onur Air",
-    "country": "Turkey"
+    "country": "Turkey",
+    "active": true
   },
   {
     "iata": "OX",
     "icao": "OEA",
     "name": "Orient Thai Airlines",
-    "country": "Thailand"
+    "country": "Thailand",
+    "active": true
   },
   {
     "iata": "OJ",
     "icao": "OLA",
     "name": "Overland Airways",
-    "country": "Nigeria"
+    "country": "Nigeria",
+    "active": true
   },
   {
     "iata": "9Q",
     "icao": "PBA",
     "name": "PB Air",
-    "country": "Thailand"
+    "country": "Thailand",
+    "active": true
   },
   {
     "iata": "BL",
     "icao": "PIC",
     "name": "Jetstar Pacific",
-    "country": "Vietnam"
+    "country": "Vietnam",
+    "active": true
   },
   {
     "iata": "Q8",
     "icao": "PEC",
     "name": "Pacific East Asia Cargo Airlines",
-    "country": "Philippines"
+    "country": "Philippines",
+    "active": true
   },
   {
     "iata": "LW",
     "icao": "NMI",
     "name": "Pacific Wings",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "PC",
     "icao": "PGT",
     "name": "Pegasus Airlines",
-    "country": "Turkey"
+    "country": "Turkey",
+    "active": true
   },
   {
     "iata": "KS",
     "icao": "PEN",
     "name": "Peninsula Airways",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "PI",
     "icao": "PDT",
     "name": "Piedmont Airlines (1948-1989)",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "9E",
     "icao": "FLG",
     "name": "Pinnacle Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "BK",
     "icao": "PDC",
     "name": "Potomac Air",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "PW",
     "icao": "PRF",
     "name": "Precision Air",
-    "country": "Tanzania"
+    "country": "Tanzania",
+    "active": true
   },
   {
     "iata": "QF",
     "icao": "QFA",
     "name": "Qantas",
-    "country": "Australia"
+    "country": "Australia",
+    "active": true
   },
   {
     "iata": "QR",
     "icao": "QTR",
     "name": "Qatar Airways",
-    "country": "Qatar"
+    "country": "Qatar",
+    "active": true
   },
   {
     "iata": "GZ",
     "icao": "RAR",
     "name": "Air Rarotonga",
-    "country": "Cook Islands"
+    "country": "Cook Islands",
+    "active": true
   },
   {
     "iata": "AT",
     "icao": "RAM",
     "name": "Royal Air Maroc",
-    "country": "Morocco"
+    "country": "Morocco",
+    "active": true
   },
   {
     "iata": "RJ",
     "icao": "RJA",
     "name": "Royal Jordanian",
-    "country": "Jordan"
+    "country": "Jordan",
+    "active": true
   },
   {
     "iata": "RA",
     "icao": "RNA",
     "name": "Royal Nepal Airlines",
-    "country": "Nepal"
+    "country": "Nepal",
+    "active": true
   },
   {
     "iata": "FR",
     "icao": "RYR",
     "name": "Ryanair",
-    "country": "Ireland"
+    "country": "Ireland",
+    "active": true
   },
   {
     "iata": "S4",
     "icao": "RZO",
     "name": "SATA International",
-    "country": "Portugal"
+    "country": "Portugal",
+    "active": true
   },
   {
     "iata": "NL",
     "icao": "SAI",
     "name": "Shaheen Air International",
-    "country": "Pakistan"
+    "country": "Pakistan",
+    "active": true
   },
   {
     "iata": "S7",
     "icao": "SBI",
     "name": "S7 Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "BB",
     "icao": "SBS",
     "name": "Seaborne Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "SY",
     "icao": "SCX",
     "name": "Sun Country Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "G3",
     "icao": "SEH",
     "name": "Sky Express",
-    "country": "Greece"
+    "country": "Greece",
+    "active": true
   },
   {
     "iata": "7G",
     "icao": "SFJ",
     "name": "Star Flyer",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "SP",
     "icao": "SAT",
     "name": "SATA Air Acores",
-    "country": "Portugal"
+    "country": "Portugal",
+    "active": true
   },
   {
     "iata": "5M",
     "icao": "SIB",
     "name": "Sibaviatrans",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "SI",
     "icao": "SIH",
     "name": "Skynet Airlines",
-    "country": "Ireland"
+    "country": "Ireland",
+    "active": true
   },
   {
     "iata": "SQ",
     "icao": "SQC",
     "name": "Singapore Airlines Cargo",
-    "country": "Singapore"
+    "country": "Singapore",
+    "active": true
   },
   {
     "iata": "DG",
     "icao": "SRQ",
     "name": "South East Asian Airlines",
-    "country": "Philippines"
+    "country": "Philippines",
+    "active": true
   },
   {
     "iata": "FS",
     "icao": "STU",
     "name": "Servicios de Transportes A",
-    "country": "Argentina"
+    "country": "Argentina",
+    "active": true
   },
   {
     "iata": "SD",
     "icao": "SUD",
     "name": "Sudan Airways",
-    "country": "Sudan"
+    "country": "Sudan",
+    "active": true
   },
   {
     "iata": "WN",
     "icao": "SWA",
     "name": "Southwest Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "A4",
     "icao": "SWD",
     "name": "Southern Winds Airlines",
-    "country": "Argentina"
+    "country": "Argentina",
+    "active": true
   },
   {
     "iata": "XQ",
     "icao": "SXS",
     "name": "SunExpress",
-    "country": "Turkey"
+    "country": "Turkey",
+    "active": true
   },
   {
     "iata": "3U",
     "icao": "CSC",
     "name": "Sichuan Airlines",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "FM",
     "icao": "CSH",
     "name": "Shanghai Airlines",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "NK",
     "icao": "NKS",
     "name": "Spirit Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "9R",
     "icao": "NSE",
     "name": "SATENA",
-    "country": "Colombia"
+    "country": "Colombia",
+    "active": true
   },
   {
     "iata": "H2",
     "icao": "SKU",
     "name": "Sky Airline",
-    "country": "Chile"
+    "country": "Chile",
+    "active": true
   },
   {
     "iata": "BC",
     "icao": "SKY",
     "name": "Skymark Airlines",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "PY",
     "icao": "SLM",
     "name": "Surinam Airways",
-    "country": "Suriname"
+    "country": "Suriname",
+    "active": true
   },
   {
     "iata": "IE",
     "icao": "SOL",
     "name": "Solomon Airlines",
-    "country": "Solomon Islands"
+    "country": "Solomon Islands",
+    "active": true
   },
   {
     "iata": "S5",
     "icao": "TCF",
     "name": "Shuttle America",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "DV",
     "icao": "VSV",
     "name": "Scat Air",
-    "country": "Kazakhstan"
+    "country": "Kazakhstan",
+    "active": true
   },
   {
     "iata": "JJ",
     "icao": "TAM",
     "name": "TAM Brazilian Airlines",
-    "country": "Brazil"
+    "country": "Brazil",
+    "active": true
   },
   {
     "iata": "TP",
     "icao": "TAP",
     "name": "TAP Portugal",
-    "country": "Portugal"
+    "country": "Portugal",
+    "active": true
   },
   {
     "iata": "TU",
     "icao": "TAR",
     "name": "Tunisair",
-    "country": "Tunisia"
+    "country": "Tunisia",
+    "active": true
   },
   {
     "iata": "TT",
     "icao": "TGW",
     "name": "Tiger Airways Australia",
-    "country": "Australia"
+    "country": "Australia",
+    "active": true
   },
   {
     "iata": "TG",
     "icao": "THA",
     "name": "Thai Airways International",
-    "country": "Thailand"
+    "country": "Thailand",
+    "active": true
   },
   {
     "iata": "TK",
     "icao": "THY",
     "name": "Turkish Airlines",
-    "country": "Turkey"
+    "country": "Turkey",
+    "active": true
   },
   {
     "iata": "T7",
     "icao": "TJT",
     "name": "Twin Jet",
-    "country": "France"
+    "country": "France",
+    "active": true
   },
   {
     "iata": "3P",
     "icao": "TNM",
     "name": "Tiara Air",
-    "country": "Aruba"
+    "country": "Aruba",
+    "active": true
   },
   {
     "iata": "PM",
     "icao": "TOS",
     "name": "Tropic Air",
-    "country": "Belize"
+    "country": "Belize",
+    "active": true
   },
   {
     "iata": "HV",
     "icao": "TRA",
     "name": "Transavia Holland",
-    "country": "Netherlands"
+    "country": "Netherlands",
+    "active": true
   },
   {
     "iata": "VR",
     "icao": "TCV",
     "name": "TACV",
-    "country": "Portugal"
+    "country": "Portugal",
+    "active": true
   },
   {
     "iata": "T5",
     "icao": "TUA",
     "name": "Turkmenistan Airlines",
-    "country": "Turkmenistan"
+    "country": "Turkmenistan",
+    "active": true
   },
   {
     "iata": "UG",
     "icao": "TUI",
     "name": "Tuninter",
-    "country": "Tunisia"
+    "country": "Tunisia",
+    "active": true
   },
   {
     "iata": "DT",
     "icao": "DTA",
     "name": "TAAG Angola Airlines",
-    "country": "Angola"
+    "country": "Angola",
+    "active": true
   },
   {
     "iata": "PZ",
     "icao": "LAP",
     "name": "TAM Mercosur",
-    "country": "Paraguay"
+    "country": "Paraguay",
+    "active": true
   },
   {
     "iata": "8R",
     "icao": "TIB",
     "name": "TRIP Linhas A",
-    "country": "Brazil"
+    "country": "Brazil",
+    "active": true
   },
   {
     "iata": "UA",
     "icao": "UAL",
     "name": "United Airlines",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "US",
     "icao": "USA",
     "name": "US Airways",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "HY",
     "icao": "UZB",
     "name": "Uzbekistan Airways",
-    "country": "Uzbekistan"
+    "country": "Uzbekistan",
+    "active": true
   },
   {
     "iata": "VF",
     "icao": "VLU",
     "name": "Valuair",
-    "country": "Singapore"
+    "country": "Singapore",
+    "active": true
   },
   {
     "iata": "Y4",
     "icao": "VOI",
     "name": "Volaris",
-    "country": "Mexico"
+    "country": "Mexico",
+    "active": true
   },
   {
     "iata": "VX",
     "icao": "VRD",
     "name": "Virgin America",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "VS",
     "icao": "VIR",
     "name": "Virgin Atlantic Airways",
-    "country": "United Kingdom"
+    "country": "United Kingdom",
+    "active": true
   },
   {
     "iata": "VY",
     "icao": "VLG",
     "name": "Vueling Airlines",
-    "country": "Spain"
+    "country": "Spain",
+    "active": true
   },
   {
     "iata": "VA",
     "icao": "VOZ",
     "name": "Virgin Australia",
-    "country": "Australia"
+    "country": "Australia",
+    "active": true
   },
   {
     "iata": "WJ",
     "icao": "WEB",
     "name": "WebJet Linhas A",
-    "country": "Brazil"
+    "country": "Brazil",
+    "active": true
   },
   {
     "iata": "WF",
     "icao": "WIF",
     "name": "Widerøe",
-    "country": "Norway"
+    "country": "Norway",
+    "active": true
   },
   {
     "iata": "W6",
     "icao": "WZZ",
     "name": "Wizz Air",
-    "country": "Hungary"
+    "country": "Hungary",
+    "active": true
   },
   {
     "iata": "MF",
     "icao": "CXA",
     "name": "Xiamen Airlines",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "IY",
     "icao": "IYE",
     "name": "Yemenia",
-    "country": "Yemen"
+    "country": "Yemen",
+    "active": true
   },
   {
     "iata": "8Q",
     "icao": "",
     "name": "Maldivian Air Taxi",
-    "country": "Maldives"
+    "country": "Maldives",
+    "active": true
   },
   {
     "iata": "VJ",
     "icao": "RAC",
     "name": "Royal Air Cambodge",
-    "country": "Cambodia"
+    "country": "Cambodia",
+    "active": true
   },
   {
     "iata": "BX",
     "icao": "ABL",
     "name": "Air Busan",
-    "country": "Republic of Korea"
+    "country": "Republic of Korea",
+    "active": true
   },
   {
     "iata": "JD",
     "icao": "JAS",
     "name": "Japan Air System",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "4H",
     "icao": "UBD",
     "name": "United Airways",
-    "country": "Bangladesh"
+    "country": "Bangladesh",
+    "active": true
   },
   {
     "iata": "5H",
     "icao": "FFV",
     "name": "Fly540",
-    "country": "Kenya"
+    "country": "Kenya",
+    "active": true
   },
   {
     "iata": "WP",
     "icao": "MKU",
     "name": "Island Air (WP)",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "B7",
     "icao": "UIA",
     "name": "Uni Air",
-    "country": "Taiwan"
+    "country": "Taiwan",
+    "active": true
   },
   {
     "iata": "TM",
     "icao": "",
     "name": "Air Mozambique",
-    "country": "Mozambique"
+    "country": "Mozambique",
+    "active": true
   },
   {
     "iata": "VH",
     "icao": "VNP",
     "name": "Virgin Pacific",
-    "country": "Fiji"
+    "country": "Fiji",
+    "active": true
   },
   {
     "iata": "HK",
     "icao": "",
     "name": "Yangon Airways",
-    "country": "Burma"
+    "country": "Burma",
+    "active": true
   },
   {
     "iata": "ZE",
     "icao": "ESR",
     "name": "Eastar Jet",
-    "country": "South Korea"
+    "country": "South Korea",
+    "active": true
   },
   {
     "iata": "3O",
     "icao": "",
     "name": "Air Arabia Maroc",
-    "country": "Morocco"
+    "country": "Morocco",
+    "active": true
   },
   {
     "iata": "YC",
     "icao": "YCC",
     "name": "Ciel Canadien",
-    "country": "Canada"
+    "country": "Canada",
+    "active": true
   },
   {
     "iata": "SZ",
     "icao": "",
     "name": "Salzburg arrows",
-    "country": "Austria"
+    "country": "Austria",
+    "active": true
   },
   {
     "iata": "5P",
     "icao": "",
     "name": "Pal airlines",
-    "country": "Chile"
+    "country": "Chile",
+    "active": true
   },
   {
     "iata": "SH",
     "icao": "SHA",
     "name": "Sharp Airlines",
-    "country": "Australia"
+    "country": "Australia",
+    "active": true
   },
   {
     "iata": "3E",
     "icao": "",
     "name": "Air Choice One",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "KN",
     "icao": "",
     "name": "China United",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "4Q",
     "icao": "",
     "name": "Safi Airlines",
-    "country": "Afghanistan"
+    "country": "Afghanistan",
+    "active": true
   },
   {
     "iata": "S6",
     "icao": "",
     "name": "Salmon Air",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "V9",
     "icao": "HCW",
     "name": "Star1 Airlines",
-    "country": "Lithuania"
+    "country": "Lithuania",
+    "active": true
   },
   {
     "iata": "I6",
     "icao": "MXI",
     "name": "MexicanaLink",
-    "country": "Mexico"
+    "country": "Mexico",
+    "active": true
   },
   {
     "iata": "3S",
     "icao": "",
     "name": "Air Antilles Express",
-    "country": "Guadeloupe"
+    "country": "Guadeloupe",
+    "active": true
   },
   {
     "iata": "OC",
     "icao": "",
     "name": "Catovair",
-    "country": "Mauritius"
+    "country": "Mauritius",
+    "active": true
   },
   {
     "iata": "E9",
     "icao": "",
     "name": "Compagnie Africaine d\\\\'Aviation",
-    "country": "Congo (Kinshasa)"
+    "country": "Congo (Kinshasa)",
+    "active": true
   },
   {
     "iata": "UJ",
     "icao": "LMU",
     "name": "AlMasria Universal Airlines",
-    "country": "Egypt"
+    "country": "Egypt",
+    "active": true
   },
   {
     "iata": "6Y",
     "icao": "",
     "name": "SmartLynx Airlines",
-    "country": "Latvia"
+    "country": "Latvia",
+    "active": true
   },
   {
     "iata": "RL",
     "icao": "RFJ",
     "name": "Royal Falcon",
-    "country": "Jordan"
+    "country": "Jordan",
+    "active": true
   },
   {
     "iata": "VQ",
     "icao": "VKH",
     "name": "Viking Hellas",
-    "country": "Greece"
+    "country": "Greece",
+    "active": true
   },
   {
     "iata": "PN",
     "icao": "CHB",
     "name": "West Air China",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "Y7",
     "icao": "",
     "name": "NordStar Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "JH",
     "icao": "",
     "name": "Fuji Dream Airlines",
-    "country": "Japan"
+    "country": "Japan",
+    "active": true
   },
   {
     "iata": "MR",
     "icao": "OME",
     "name": "Homer Air",
-    "country": "Germany"
+    "country": "Germany",
+    "active": true
   },
   {
     "iata": "WU",
     "icao": "WAU",
     "name": "Wizz Air Ukraine",
-    "country": "Ukraine"
+    "country": "Ukraine",
+    "active": true
   },
   {
     "iata": "AD",
     "icao": "AZU",
     "name": "Azul",
-    "country": "Brazil"
+    "country": "Brazil",
+    "active": true
   },
   {
     "iata": "PQ",
     "icao": "LOO",
     "name": "LSM Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "FZ",
     "icao": "FDB",
     "name": "Fly Dubai",
-    "country": "United Arab Emirates"
+    "country": "United Arab Emirates",
+    "active": true
   },
   {
     "iata": "JY",
     "icao": "AXZ",
     "name": "Aereonautica militare",
-    "country": "Italy"
+    "country": "Italy",
+    "active": true
   },
   {
     "iata": "G5",
     "icao": "",
     "name": "Huaxia",
-    "country": "China"
+    "country": "China",
+    "active": true
   },
   {
     "iata": "M4",
     "icao": "1QA",
     "name": "Marysya Airlines",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "YT",
     "icao": "",
     "name": "Yeti Airways",
-    "country": "Nepal"
+    "country": "Nepal",
+    "active": true
   },
   {
     "iata": "NS",
     "icao": "",
     "name": "Caucasus Airlines",
-    "country": "Georgia"
+    "country": "Georgia",
+    "active": true
   },
   {
     "iata": "YO",
     "icao": "TYS",
     "name": "TransHolding System",
-    "country": "Brazil"
+    "country": "Brazil",
+    "active": true
   },
   {
     "iata": "3F",
     "icao": "3FF",
     "name": "Fly Colombia ( Interliging Flights )",
-    "country": "Colombia"
+    "country": "Colombia",
+    "active": true
   },
   {
     "iata": "BU",
     "icao": "BUU",
     "name": "Baikotovitchestrian Airlines",
-    "country": "American Samoa"
+    "country": "American Samoa",
+    "active": true
   },
   {
     "iata": "7M",
     "icao": "ZTF",
     "name": "Mongolian International Air Lines",
-    "country": "Mongolia"
+    "country": "Mongolia",
+    "active": true
   },
   {
     "iata": "W4",
     "icao": "WER",
     "name": "AeroWorld",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "HN",
     "icao": "HNX",
     "name": "Hankook Airline",
-    "country": "South Korea"
+    "country": "South Korea",
+    "active": true
   },
   {
     "iata": "Y8",
     "icao": "MRS",
     "name": "Marusya Airways",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "XV",
     "icao": "",
     "name": "BVI Airways",
-    "country": "British Virgin Islands"
+    "country": "British Virgin Islands",
+    "active": true
   },
   {
     "iata": "YQ",
     "icao": "",
     "name": "Polet Airlines (Priv)",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "AW",
     "icao": "AWM",
     "name": "Asian Wings Airways",
-    "country": "Burma"
+    "country": "Burma",
+    "active": true
   },
   {
     "iata": "E5",
     "icao": "RBG",
     "name": "Air Arabia Egypt",
-    "country": "Egypt"
+    "country": "Egypt",
+    "active": true
   },
   {
     "iata": "NP",
     "icao": "NIA",
     "name": "Nile Air",
-    "country": "Egypt"
+    "country": "Egypt",
+    "active": true
   },
   {
     "iata": "DN",
     "icao": "SGG",
     "name": "Senegal Airlines",
-    "country": "Senegal"
+    "country": "Senegal",
+    "active": true
   },
   {
     "iata": "S9",
     "icao": "",
     "name": "Starbow Airlines",
-    "country": "Ghana"
+    "country": "Ghana",
+    "active": true
   },
   {
     "iata": "8B",
     "icao": "BCC",
     "name": "BusinessAir",
-    "country": "Thailand"
+    "country": "Thailand",
+    "active": true
   },
   {
     "iata": "YR",
     "icao": "",
     "name": "SENIC AIRLINES",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "4O",
     "icao": "",
     "name": "Interjet (ABC Aerolineas)",
-    "country": "Mexico"
+    "country": "Mexico",
+    "active": true
   },
   {
     "iata": "TZ",
     "icao": "SCO",
     "name": "Scoot",
-    "country": "Singapore"
+    "country": "Singapore",
+    "active": true
   },
   {
     "iata": "5Q",
     "icao": "",
     "name": "BQB Lineas Aereas",
-    "country": "Uruguay"
+    "country": "Uruguay",
+    "active": true
   },
   {
     "iata": "TJ",
     "icao": "TJA",
     "name": "T.J. Air",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "W2",
     "icao": "",
     "name": "Maastricht Airlines",
-    "country": "Netherlands"
+    "country": "Netherlands",
+    "active": true
   },
   {
     "iata": "Q3",
     "icao": "QER",
     "name": "SOCHI AIR CHATER",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "Z9",
     "icao": "",
     "name": "Flightlink Tanzania",
-    "country": "Tanzania"
+    "country": "Tanzania",
+    "active": true
   },
   {
     "iata": "I8",
     "icao": "",
     "name": "IzAvia",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "7I",
     "icao": "",
     "name": "Insel Air (7I/INC) (Priv)",
-    "country": "Netherlands Antilles"
+    "country": "Netherlands Antilles",
+    "active": true
   },
   {
     "iata": "QG",
     "icao": "",
     "name": "Citilink Indonesia",
-    "country": "Indonesia"
+    "country": "Indonesia",
+    "active": true
   },
   {
     "iata": "JU",
     "icao": "ASL",
     "name": "Air Serbia",
-    "country": "Serbia"
+    "country": "Serbia",
+    "active": true
   },
   {
     "iata": "RX",
     "icao": "RPO",
     "name": "Rainbow Air Polynesia",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "A2",
     "icao": "AL2",
     "name": "All America",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "I4",
     "icao": "",
     "name": "International AirLink",
-    "country": "Jamaica"
+    "country": "Jamaica",
+    "active": true
   },
   {
     "iata": "9V",
     "icao": "VC9",
     "name": "Volotea Costa Rica",
-    "country": "Costa Rica"
+    "country": "Costa Rica",
+    "active": true
   },
   {
     "iata": "E8",
     "icao": "GTA",
     "name": "City Airways",
-    "country": "Thailand"
+    "country": "Thailand",
+    "active": true
   },
   {
     "iata": "D2",
     "icao": "",
     "name": "Severstal Air Company",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   },
   {
     "iata": "4B",
     "icao": "BTQ",
     "name": "Boutique Air (Priv)",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "V7",
     "icao": "VOE",
     "name": "VOLOTEA Airways",
-    "country": "Spain"
+    "country": "Spain",
+    "active": true
   },
   {
     "iata": "Q7",
     "icao": "",
     "name": "SkyBahamas Airlines",
-    "country": "Bahamas"
+    "country": "Bahamas",
+    "active": true
   },
   {
     "iata": "3M",
     "icao": "",
     "name": "Silver Airways (3M)",
-    "country": "United States"
+    "country": "United States",
+    "active": true
   },
   {
     "iata": "F5",
     "icao": "FI5",
     "name": "Fly One",
-    "country": "Moldova"
+    "country": "Moldova",
+    "active": true
   },
   {
     "iata": "7R",
     "icao": "SJM",
     "name": "Svyaz Rossiya",
-    "country": "Russia"
+    "country": "Russia",
+    "active": true
   }
 ]
