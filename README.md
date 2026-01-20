@@ -1,8 +1,8 @@
-# FlightSeek
+# FlightSeeker
 
 An interactive flight route explorer that visualizes airline networks worldwide. Click on any airport to see all destinations, filter by airline or aircraft type, and explore global aviation connectivity.
 
-![FlightSeek Screenshot](screenshot.png)
+![FlightSeeker Screenshot](screenshot.png)
 
 ## Features
 
@@ -47,8 +47,8 @@ All data is free and open source:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/flightseek.git
-cd flightseek
+git clone https://github.com/yourusername/flightseeker.git
+cd flightseeker
 
 # Install dependencies
 npm install
@@ -72,7 +72,7 @@ npm start
 ## Project Structure
 
 ```
-flightseek/
+flightseeker/
 ├── data/                    # Raw data files (CSV, DAT)
 ├── public/
 │   └── data/               # Processed JSON data

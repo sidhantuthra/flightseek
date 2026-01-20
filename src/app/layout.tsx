@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FlightSeek - Interactive Flight Route Explorer",
+  title: "FlightSeeker - Interactive Flight Route Explorer",
   description: "Explore flight routes worldwide. Click on any airport to see all destinations, filter by airline or aircraft type.",
 };
 
