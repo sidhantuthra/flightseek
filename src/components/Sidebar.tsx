@@ -205,7 +205,7 @@ export default function Sidebar({
             <div className="flex items-center justify-between">
               <h1 className="text-xl font-bold text-white flex items-center gap-2">
                 <Plane className="w-5 h-5 text-blue-400" />
-                FlightSeek
+                FlightSeeker
               </h1>
               {(selectedAirport || hasActiveFilters) && (
                 <button
