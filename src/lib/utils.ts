@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // Calculate great circle arc points between two coordinates
-// Returns an array of [lat, lon] points with continuous longitudes
+// Returns continuous coordinates (may extend beyond -180/+180 for smooth rendering)
 export function getArcPoints(
   start: [number, number],
   end: [number, number],

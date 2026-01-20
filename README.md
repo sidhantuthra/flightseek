@@ -1,6 +1,8 @@
 # FlightSeek
 
-An interactive flight route explorer that visualizes airline networks worldwide. Click on any airport to see all destinations, filter by airline or aircraft type, and explore global aviation connectivity.xs
+An interactive flight route explorer that visualizes airline networks worldwide. Click on any airport to see all destinations, filter by airline or aircraft type, and explore global aviation connectivity.
+
+![FlightSeek Screenshot](screenshot.png)
 
 ## Features
 

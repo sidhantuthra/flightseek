@@ -59,9 +59,9 @@ export default function FlightMap({
       zoom: 2,
       minZoom: 2,
       maxZoom: 12,
-      worldCopyJump: false, // Disable to allow smooth trans-Pacific routes
-      maxBounds: [[-90, -270], [90, 270]], // Allow panning slightly beyond standard bounds
-      maxBoundsViscosity: 0.5,
+      worldCopyJump: false,
+      maxBounds: [[-90, -540], [90, 540]], // Allow extended panning for continuous routes
+      maxBoundsViscosity: 1.0,
     });
 
     // Dark theme tile layer
@@ -184,7 +184,6 @@ export default function FlightMap({
 
       // Use first matching operator for color
       const operators = route.operators || [];
-      const codeshares = route.codeshares || [];
       const colorAirline = filters.airlines.length > 0 
         ? operators.find(a => filters.airlines.includes(a)) || operators[0]
         : operators[0] || "XX";
@@ -202,6 +201,7 @@ export default function FlightMap({
         `Operated by: ${operatorNames}${moreOperators}<br/>` +
         `Aircraft: ${route.aircraft.slice(0, 5).join(", ")}${route.aircraft.length > 5 ? "..." : ""}`;
 
+      // Draw the continuous polyline
       const polyline = L.polyline(arcPoints as L.LatLngExpression[], {
         color: color,
         weight: 2,
@@ -215,6 +215,28 @@ export default function FlightMap({
       });
 
       polyline.addTo(routesLayerRef.current!);
+
+      // Add destination marker at the arc endpoint (may be at extended coordinates)
+      const endPoint = arcPoints[arcPoints.length - 1];
+      const destMarker = L.circleMarker(endPoint as L.LatLngExpression, {
+        radius: 5,
+        fillColor: color,
+        color: "#fff",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.9,
+      });
+
+      destMarker.bindTooltip(
+        `<strong>${destAirport.iata}</strong><br/>${destAirport.city || destAirport.name}`,
+        { direction: "top" }
+      );
+
+      destMarker.on("click", () => {
+        onAirportSelect(destAirport);
+      });
+
+      destMarker.addTo(routesLayerRef.current!);
     });
 
     // Pan to selected airport if there is one
