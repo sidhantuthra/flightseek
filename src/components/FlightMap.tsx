@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { Airport, Route, Airline } from "@/types";
+import { Airport, Route, Airline, Filters } from "@/types";
 import { getArcPoints } from "@/lib/utils";
 
 interface FlightMapProps {
@@ -13,10 +13,7 @@ interface FlightMapProps {
   airlines: Airline[];
   selectedAirport: Airport | null;
   onAirportSelect: (airport: Airport | null) => void;
-  filters: {
-    airlines: string[];
-    aircraft: string[];
-  };
+  filters: Filters;
 }
 
 export default function FlightMap({
